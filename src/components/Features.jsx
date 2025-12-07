@@ -24,7 +24,7 @@ export default function Services() {
       {/* LEFT SIDE - TEXT */}
       <div className="flex flex-col gap-8 z-10">
         <h3 className="text-sm border border-gray-400 px-4 py-1 rounded-full w-fit">Services</h3>
-        <h1 className="text-5xl font-medium -mt-2">How can we help you?</h1>
+        <h1 className="text-5xl font-regular -mt-2">How can we help you?</h1>
 
         <div className="mt-8 flex flex-col gap-10 ml-12">
           {services.map((s) => (
@@ -33,12 +33,12 @@ export default function Services() {
               onMouseEnter={() => setActive(s.id)}
               className={`cursor-pointer transition-all duration-300 flex items-center gap-6`}>
               <span
-                className={`text-[32px] font-medium transition-all duration-300 ${
+                className={`text-[32px] font-regular transition-all duration-300 ${
                   active === s.id ? "text-black" : "text-gray-300"
                 }`}>
                 {`0${s.id}`}
               </span>
-              <h2 className={`text-[32px] font-medium transition-all duration-300 ${
+              <h2 className={`text-[32px] font-regular transition-all duration-300 ${
                   active === s.id ? "text-black" : "text-gray-400 opacity-40"
                 }`}>{s.title}
               </h2>
