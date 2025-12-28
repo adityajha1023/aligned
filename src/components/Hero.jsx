@@ -7,7 +7,7 @@ function Hero() {
       {/* Hero Content */}
       <div className="pt-28 sm:pt-32 px-4 sm:px-6 flex flex-col items-center gap-5 sm:gap-6 text-center font-bricolage">
         {/* Badge */}
-        <p className="border border-[#ccc/70] px-3 py-1 rounded-full text-sm sm:text-base">
+        <p className="border border-[#ccc/70] px-3 pt-1 rounded-full text-sm sm:text-base">
           with ALN'D
         </p>
 

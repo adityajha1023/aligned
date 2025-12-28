@@ -39,8 +39,7 @@ function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute top-[80px] left-0 w-full bg-white/90 backdrop-blur-lg border-b border-[#ccc]
-        transition-all duration-300 overflow-hidden
+        className={`md:hidden absolute rounded-b-[50px] top-[80px] left-0 w-full bg-white backdrop-blur-lg border-b border-[#ccc] transition-all duration-300 overflow-hidden
         ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}
       >
         <ul className="flex flex-col items-center gap-6 py-8">
