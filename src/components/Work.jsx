@@ -7,12 +7,10 @@ const Example = () => {
       <div className="flex h-48 items-center justify-center font-bricolage">
         <div className="flex flex-col justify-center items-center">
         <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full">Showcase</span>
-        <h2 className="text-5xl font-regular mt-6">Our Work</h2>
+        <h2 className="text-5xl font-normal mt-3">Our Work</h2>
         </div>
       </div>
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-      </div>
     </div>
   );
 };
@@ -23,11 +21,11 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-68%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-67.5%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]">
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+    <section ref={targetRef} className="relative -mt-8 h-[300vh]">
+      <div className="sticky top-8 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-16">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
@@ -42,7 +40,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[75vh] w-[95vw] rounded-xl overflow-hidden bg-neutral-200"
+      className="group relative h-[83vh] w-[95vw] rounded-xl overflow-hidden bg-neutral-200"
     >
       <div
         style={{
