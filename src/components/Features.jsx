@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import feature1 from "../assets/feature1.png";
 import feature2 from "../assets/feature2.png";
 import feature3 from "../assets/feature3.png";
+import feature4 from "../assets/feature4.png";
+import feature5 from "../assets/feature5.png";
 
 export default function Services() {
   // default active = 2 (Social Media Marketing)
@@ -9,8 +11,10 @@ export default function Services() {
 
   const services = [
     { id: 1, title: "Creative Visualisation", img: feature1 },
-    { id: 2, title: "Social Media Marketing", img: feature2 },
-    { id: 3, title: "Packaging & Branding", img: feature3 },
+    { id: 2, title: "Personal Branding", img: feature2 },
+    { id: 3, title: "Social Media Marketing", img: feature3 },
+    { id: 4, title: "Packaging & Branding", img: feature4 },
+    { id: 5, title: "Growth Marketing", img: feature5 },
   ];
 
   // helper to get left and right neighbors for the active index (circular)
@@ -20,13 +24,13 @@ export default function Services() {
 
   return (
 
-    <div className="w-full min-h-screen font-bricolage flex justify-center gap-48 items-center p-16">
+    <div className="w-full min-h-[120vh] font-bricolage flex justify-center gap-48 items-center p-16">
       {/* LEFT SIDE - TEXT */}
       <div className="flex flex-col gap-8 z-10">
         <h3 className="text-sm border border-gray-400 px-4 py-1 rounded-full w-fit">Services</h3>
         <h1 className="text-5xl font-regular -mt-2">How can we help you?</h1>
 
-        <div className="mt-8 flex flex-col gap-10 ml-12">
+        <div className="mt-8 flex flex-col gap-6 ml-12">
           {services.map((s) => (
             <div
               key={s.id}
