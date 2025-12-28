@@ -20,88 +20,103 @@ export default function Services() {
     const activeIdx = services.findIndex((s) => s.id === active);
     const currentIdx = services.findIndex((s) => s.id === serviceId);
     const total = services.length;
-    
+
     let diff = currentIdx - activeIdx;
     if (diff > total / 2) diff -= total;
     if (diff < -total / 2) diff += total;
-    
+
     return diff;
   };
 
   return (
-    <div className="w-full min-h-screen font-bricolage flex justify-center gap-48 items-center p-16 bg-gray-50">
-      <div className="flex flex-col gap-8 z-10">
-        <h3 className="text-sm border border-gray-400 px-4 py-1 rounded-full w-fit">Services</h3>
-        <h1 className="text-5xl font-normal -mt-2 leading-tight max-w-4xl">How can we help you?</h1>
+    <section className="w-full min-h-screen font-bricolage bg-gray-50">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-48 px-4 sm:px-8 py-20">
+        {/* LEFT CONTENT */}
+        <div className="flex flex-col gap-6 lg:gap-8 z-10 w-full lg:w-auto">
+          <h3 className="text-xs sm:text-sm border border-gray-400 px-4 py-1 rounded-full w-fit">
+            Services
+          </h3>
 
-        <div className="mt-8 flex flex-col gap-6 ml-12">
-          {services.map((s) => (
-            <div
-              key={s.id}
-              onMouseEnter={() => setActive(s.id)}
-              className="cursor-pointer transition-all duration-300 flex items-center gap-6"
-            >
-              <span
-                className={`text-3xl font-normal transition-all duration-300 ${
-                  active === s.id ? "text-black" : "text-gray-300"
-                }`}
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+            How can we help you?
+          </h1>
+
+          {/* SERVICES LIST */}
+          <div className="mt-6 lg:mt-8 flex flex-col gap-4 sm:gap-6 lg:ml-12">
+            {services.map((s) => (
+              <div
+                key={s.id}
+                onMouseEnter={() => setActive(s.id)}
+                onClick={() => setActive(s.id)} // mobile support
+                className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all"
               >
-                {`0${s.id}`}
-              </span>
-              <h2
-                className={`text-3xl font-normal transition-all duration-300 ${
-                  active === s.id ? "text-black" : "text-gray-400 opacity-40"
-                }`}
-              >
-                {s.title}
-              </h2>
-            </div>
-          ))}
+                <span
+                  className={`text-xl sm:text-2xl lg:text-3xl transition-all ${
+                    active === s.id ? "text-black" : "text-gray-300"
+                  }`}
+                >
+                  {`0${s.id}`}
+                </span>
+
+                <h2
+                  className={`text-xl sm:text-2xl lg:text-3xl transition-all ${
+                    active === s.id
+                      ? "text-black"
+                      : "text-gray-400 opacity-40"
+                  }`}
+                >
+                  {s.title}
+                </h2>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* RIGHT IMAGE STACK */}
+        <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:w-[520px] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
+          {services.map((s) => {
+            const position = getPosition(s.id);
+
+            if (Math.abs(position) > 1) return null;
+
+            const base =
+              "absolute w-[200px] sm:w-[220px] lg:w-[260px] h-[260px] sm:h-[300px] lg:h-[320px] object-cover rounded-xl transition-all duration-500 ease-out";
+
+            let transform = "";
+            let z = "";
+            let opacity = "";
+            let shadow = "";
+
+            if (position === -1) {
+              transform =
+                "-translate-x-20 sm:-translate-x-28 lg:-translate-x-32 -translate-y-6 sm:-translate-y-8 scale-90";
+              z = "z-10";
+              opacity = "opacity-40";
+              shadow = "shadow-md";
+            } else if (position === 0) {
+              transform = "scale-100";
+              z = "z-30";
+              opacity = "opacity-100";
+              shadow = "shadow-2xl";
+            } else if (position === 1) {
+              transform =
+                "translate-x-20 sm:translate-x-28 lg:translate-x-32 translate-y-6 sm:translate-y-8 scale-90";
+              z = "z-20";
+              opacity = "opacity-40";
+              shadow = "shadow-md";
+            }
+
+            return (
+              <img
+                key={s.id}
+                src={s.img}
+                alt={s.title}
+                className={`${base} ${transform} ${z} ${opacity} ${shadow}`}
+              />
+            );
+          })}
         </div>
       </div>
-
-      <div className="relative w-[520px] h-[420px] flex items-center justify-center">
-        {services.map((s) => {
-          const position = getPosition(s.id);
-          
-          if (position === -2 || position === 2) {
-            return null;
-          }
-
-          const baseClasses = "absolute w-[260px] h-[320px] object-cover rounded-xl transition-all duration-500 ease-out";
-
-          let transformClasses = "";
-          let zClass = "";
-          let opacityClass = "";
-          let shadowClass = "";
-
-          if (position === -1) {
-            transformClasses = "-translate-x-32 -translate-y-8 scale-90 ";
-            zClass = "z-10";
-            opacityClass = "opacity-40";
-            shadowClass = "shadow-md";
-          } else if (position === 0) {
-            transformClasses = "translate-x-0 translate-y-0 scale-100 rotate-0";
-            zClass = "z-30";
-            opacityClass = "opacity-100";
-            shadowClass = "shadow-2xl";
-          } else if (position === 1) {
-            transformClasses = "translate-x-32 translate-y-8 scale-90 ";
-            zClass = "z-20";
-            opacityClass = "opacity-40";
-            shadowClass = "shadow-md";
-          }
-
-          return (
-            <img
-              key={s.id}
-              src={s.img}
-              alt={s.title}
-              className={`${baseClasses} ${transformClasses} ${zClass} ${opacityClass} ${shadowClass}`}
-            />
-          );
-        })}
-      </div>
-    </div>
+    </section>
   );
 }
