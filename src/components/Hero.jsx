@@ -6,8 +6,8 @@ function Hero() {
   return (
     <div>
     <div className='pt-32 flex justify-center items-center flex-col font-bricolage gap-6 text-center'>
-      <p className='border-2 border-[#ccc/70] px-3 py-1 rounded-full'>with <b>Aligned</b></p>
-      <h1 className="text-6xl font-medium leading-tight max-w-4xl">
+      <p className='border-2 border-[#ccc/70] px-3 py-1 rounded-full'>with ALN'D</p>
+      <h1 className="text-6xl font-normal leading-tight max-w-4xl">
         <span className="text-[#3A4DA7]">Strategic </span> in thought. {" "}
         <span className="inline-flex items-center gap-2">
           Artful &nbsp;
