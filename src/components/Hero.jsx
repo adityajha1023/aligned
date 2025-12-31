@@ -12,7 +12,7 @@ function Hero() {
         </p>
 
         {/* Heading */}
-        <h1 className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-6xl font-normal leading-tight max-w-[90%] sm:max-w-3xl lg:max-w-4xl">
+        <h1 className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-6xl font-medium leading-tight max-w-[90%] sm:max-w-3xl lg:max-w-4xl">
           <span className="text-[#3A4DA7]">Strategic </span>
           in thought.{" "}
           <span className="inline-flex items-center gap-2">
@@ -30,7 +30,7 @@ function Hero() {
         {/* CTA */}
         <a
           href="#"
-          className="bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-base sm:text-lg shadow-md hover:scale-105 transition"
+          className="bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-base sm:text-lg font-medium shadow-md hover:scale-105 transition"
         >
           Get in Touch
         </a>

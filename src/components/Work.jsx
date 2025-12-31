@@ -1,5 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
+import {Link} from 'react-router-dom';
+import project1 from "../assets/project1.png";
+import { ArrowUpRight } from "lucide-react";
 
 const Example = () => {
   return (
@@ -21,7 +24,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-67.5%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-66.5%"]);
 
   return (
     <section ref={targetRef} className="relative -mt-8 h-[300vh]">
@@ -47,13 +50,21 @@ const Card = ({ card }) => {
           backgroundImage: `url(${card.url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          filter: "brightness(0.5)",
         }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        className="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105"></div>
+      <div className="absolute inset-0 z-10 gap-0 flex items-start flex-col justify-end p-6">
+        <p className="text-3xl font-bricolage text-white">
           {card.title}
         </p>
+        <p className="text-xl font-bricolage text-white">
+          {card.description}
+        </p>
+      </div>
+      <div className="absolute inset-0 z-10 gap-0 flex items-end flex-col justify-end p-6">
+        <Link to="#" className="text-white underline bg-white/20 rounded-full  p-2 backdrop-blur-xl">
+        <ArrowUpRight size={60} strokeWidth={0.8}/>
+        </Link>
       </div>
     </div>
   );
@@ -63,18 +74,21 @@ export default Example;
 
 const cards = [
   {
-    url: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?q=80&w=1176&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    title: "Title 1",
+    url: project1,
+    title: "Project Name",
+    description: "Project description Project description Project description ",
     id: 1,
   },
   {
     url: "/imgs/abstract/2.jpg",
     title: "Title 2",
+    description: "Project description Project description Project description ",
     id: 2,
   },
   {
     url: "/imgs/abstract/3.jpg",
     title: "Title 3",
+    description: "Project description Project description Project description ",
     id: 3,
   },
 ];

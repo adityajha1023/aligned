@@ -33,11 +33,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-48 px-4 sm:px-8 py-20">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-6 lg:gap-8 z-10 w-full lg:w-auto">
-          <h3 className="text-xs sm:text-sm border border-gray-400 px-4 py-1 rounded-full w-fit">
-            Services
-          </h3>
-
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+          <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full w-fit">Services</span>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl -mt-3 font-medium leading-tight">
             How can we help you?
           </h1>
 
@@ -48,13 +45,11 @@ export default function Services() {
                 key={s.id}
                 onMouseEnter={() => setActive(s.id)}
                 onClick={() => setActive(s.id)} // mobile support
-                className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all"
-              >
+                className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
                 <span
-                  className={`text-xl sm:text-2xl lg:text-3xl transition-all ${
+                  className={`text-xl sm:text-2xl lg:text-4xl transition-all ${
                     active === s.id ? "text-black" : "text-gray-300"
-                  }`}
-                >
+                  }`}>
                   {`0${s.id}`}
                 </span>
 
@@ -63,8 +58,7 @@ export default function Services() {
                     active === s.id
                       ? "text-black"
                       : "text-gray-400 opacity-40"
-                  }`}
-                >
+                  }`}>
                   {s.title}
                 </h2>
               </div>
@@ -73,7 +67,7 @@ export default function Services() {
         </div>
 
         {/* RIGHT IMAGE STACK */}
-        <div className="relative w-full max-w-[420px] sm:max-w-[480px] lg:w-[520px] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
+        <div className="relative w-full max-w-[420px] sm:mt-40 mt-0 sm:max-w-[480px] lg:w-[520px] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
           {services.map((s) => {
             const position = getPosition(s.id);
 
