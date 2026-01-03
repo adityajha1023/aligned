@@ -44,7 +44,7 @@ export default function Services() {
               <div
                 key={s.id}
                 onMouseEnter={() => setActive(s.id)}
-                onClick={() => setActive(s.id)} // mobile support
+                onClick={() => setActive(s.id)}
                 className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
                 <span
                   className={`text-h4 transition-all ${
