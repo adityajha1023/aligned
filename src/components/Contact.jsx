@@ -32,7 +32,7 @@ function Contact() {
                         </form>
                     </div>
                 </div>
-                <div className='flex justify-end items-end p-4 font-medium text-h6 text-right h-[60vh] w-[22vw] bg-gradient-to-b from-white to-[#A4C6EC] rounded-xl'>
+                <div className='flex justify-end items-end p-4 font-medium text-h6 text-right h-[60vh] w-[22vw] bg-gradient-to-b from-white to-[#D0E8F6] rounded-xl'>
                     <h3>Make your brand <br />ALN'D. <br />Recognised. <br />Remembered.</h3>
                 </div>
             </div>
