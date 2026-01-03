@@ -4,6 +4,7 @@
 
 body{
     background-color: #FAF9F6;
+    cursor: none;
 }
 
 ::-webkit-scrollbar{

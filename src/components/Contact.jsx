@@ -4,8 +4,6 @@ import { useState } from 'react';
 function Contact() {
     const[service, setService] = useState("");
     
-
-
     return (
         <div className='flex justify-center items-center h-[90vh]'>
             <div className='flex justify-between w-[90vw] items-center font-bricolage'>
