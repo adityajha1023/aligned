@@ -11,9 +11,9 @@ function Contact() {
                     <span className="text-h3 font-[500]">We're listening</span>
                     <div>
                         <form action="#" className='flex flex-col'> 
-                            <input type="text" className='outline-none bg-transparent border-b-2 border-gray-200 w-[25rem] my-8 py-4 px-1 text-gray-500 font-normal text-paragraph' placeholder='Your Name'/>
-                            <input type="email" className='outline-none bg-transparent border-b-2 border-gray-200 w-[25rem] py-4 px-1 text-gray-500 font-normal text-paragraph' placeholder='Your Email'/>
-                            <select onChange={(e)=>setService(e.target.value)} name="Services" value={service} id="services" className='outline-none bg-transparent border-b-2 border-gray-200 w-[25rem] my-8 py-4 text-gray-500 font-normal text-paragraph'>
+                            <input required type="text" className='outline-none bg-transparent border-b-2 border-gray-200 w-[25rem] my-8 py-4 px-1 text-gray-500 font-normal text-paragraph' placeholder='Your Name'/>
+                            <input required type="email" className='outline-none bg-transparent border-b-2 border-gray-200 w-[25rem] py-4 px-1 text-gray-500 font-normal text-paragraph' placeholder='Your Email'/>
+                            <select required onChange={(e)=>setService(e.target.value)} name="Services" value={service} id="services" className='outline-none bg-transparent border-b-2 border-gray-200 w-[25rem] my-8 py-4 text-gray-500 font-normal text-paragraph'>
                                 <option value="" disabled>Select Service</option>
                                 <option value="Creative Visualisation">Creative Visualisation</option>
                                 <option value="Personal Branding">Personal Branding</option>
@@ -22,8 +22,9 @@ function Contact() {
                                 <option value="Growth Marketing">Growth Marketing</option>
                             </select>
                         </form>
-                        <a href="#" className="inline-block text-center w-[25rem] bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-paragraph font-medium shadow-md hover:scale-105 transition-all">
-                        Start the Conversation</a>
+                        <input type="submit" value="Start the Conversation" className='inline-block text-center w-[25rem] bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-paragraph font-medium shadow-md hover:scale-105 transition-all' />
+                        {/* <a href="#" className="inline-block text-center w-[25rem] bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-paragraph font-medium shadow-md hover:scale-105 transition-all">
+                        Start the Conversation</a> */}
 
                     </div>
                 </div>
