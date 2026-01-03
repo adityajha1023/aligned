@@ -7,12 +7,12 @@ function Hero() {
       {/* Hero Content */}
       <div className="pt-28 sm:pt-32 px-4 sm:px-6 flex flex-col items-center gap-5 sm:gap-6 text-center font-bricolage">
         {/* Badge */}
-        <p className="border border-[#ccc/70] px-3 pt-1 rounded-full text-sm sm:text-base">
+        <p className="border border-[#ccc/70] px-3 py-1 rounded-full text-sm">
           with ALN'D
         </p>
 
         {/* Heading */}
-        <h1 className="text-[34px] sm:text-[44px] md:text-[56px] lg:text-6xl font-medium leading-tight max-w-[90%] sm:max-w-3xl lg:max-w-4xl">
+        <h1 className="text-h1 font-[500] leading-tight max-w-[90%] sm:max-w-3xl lg:max-w-4xl">
           <span className="text-[#3A4DA7]">Strategic </span>
           in thought.{" "}
           <span className="inline-flex items-center gap-2">
@@ -30,7 +30,7 @@ function Hero() {
         {/* CTA */}
         <a
           href="#"
-          className="bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-base sm:text-lg font-medium shadow-md hover:scale-105 transition"
+          className="bg-black rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-white text-h6 font-[400] shadow-md hover:scale-105 transition"
         >
           Get in Touch
         </a>

@@ -16,8 +16,7 @@ function Header() {
           {["Home", "Services", "Projects", "FAQs"].map((item) => (
             <li
               key={item}
-              className="text-[16px] opacity-65 cursor-pointer hover:opacity-100 hover:scale-110 transition-all duration-300"
-            >
+              className="text-paragraph opacity-65 cursor-pointer hover:opacity-100 hover:scale-110 transition-all duration-300">
               {item}
             </li>
           ))}

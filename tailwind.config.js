@@ -11,8 +11,21 @@ export default {
   			bricolage: [
   				'Bricolage Grotesque',
   				'sans-serif'
-  			]
+  			],
+			cairo: [
+				'Cairo',
+				'sans-serif'
+			]
   		},
+		fontSize:{
+			'sm': '0.833rem',
+			'paragraph': '1rem',
+			'h1': '2.986rem',
+			'h2': '2.488rem',
+			'h3': '2.074rem',
+			'h4': '1.728rem',
+			'h6': '1.2rem'
+		},
   		colors: {
 			or: '#F36E33',
   			accent: {

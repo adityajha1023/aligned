@@ -33,8 +33,8 @@ export default function Services() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-48 px-4 sm:px-8 py-20">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-6 lg:gap-8 z-10 w-full lg:w-auto">
-          <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full w-fit">Services</span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl -mt-3 font-medium leading-tight">
+          <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full w-fit text-sm">Services</span>
+          <h1 className="text-h2 -mt-3 font-[500] leading-tight">
             How can we help you?
           </h1>
 
@@ -47,7 +47,7 @@ export default function Services() {
                 onClick={() => setActive(s.id)} // mobile support
                 className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
                 <span
-                  className={`text-xl sm:text-2xl lg:text-4xl transition-all ${
+                  className={`text-h4 transition-all ${
                     active === s.id ? "text-black" : "text-gray-300"
                   }`}>
                   {`0${s.id}`}

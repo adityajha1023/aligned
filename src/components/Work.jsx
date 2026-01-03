@@ -9,8 +9,8 @@ const Example = () => {
     <div>
       <div className="flex h-48 items-center justify-center font-bricolage">
         <div className="flex flex-col justify-center items-center">
-        <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full">Showcase</span>
-        <h2 className="text-5xl font-normal mt-3">Our Work</h2>
+        <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full text-sm">Showcase</span>
+        <h2 className="text-h2 font-[500] mt-3">Our Work</h2>
         </div>
       </div>
       <HorizontalScrollCarousel />
@@ -27,7 +27,7 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-66.5%"]);
 
   return (
-    <section ref={targetRef} className="relative -mt-8 h-[300vh]">
+    <section ref={targetRef} className="relative -mt-16 h-[300vh]">
       <div className="sticky top-8 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-16">
           {cards.map((card) => {
@@ -54,10 +54,10 @@ const Card = ({ card }) => {
         }}
         className="absolute inset-0 z-0 transition-transform duration-500 group-hover:scale-105"></div>
       <div className="absolute inset-0 z-10 gap-0 flex items-start flex-col justify-end p-6">
-        <p className="text-3xl font-bricolage text-white">
+        <p className="text-h4 font-bricolage text-white">
           {card.title}
         </p>
-        <p className="text-xl font-bricolage text-white">
+        <p className="text-paragraph font-bricolage text-white">
           {card.description}
         </p>
       </div>
