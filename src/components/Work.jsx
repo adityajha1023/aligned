@@ -63,7 +63,7 @@ const Card = ({ card }) => {
       </div>
       <div className="absolute inset-0 z-10 gap-0 flex items-end flex-col justify-end p-6">
         <Link to="#" className="text-white underline bg-white/20 rounded-full  p-2 backdrop-blur-xl">
-        <ArrowUpRight size={60} strokeWidth={0.8}/>
+        <ArrowUpRight size={50} strokeWidth={0.8}/>
         </Link>
       </div>
     </div>
