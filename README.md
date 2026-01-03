@@ -14,7 +14,13 @@ Features they want to add
 "Footer"
 
 <------------------- Visual Heirarchy ------------------>
-
+h1 -> 2.986rem
+h2 -> 2.488rem
+h3 -> 2.074rem
+h4 -> 1.728rem
+h6 -> 1.2rem
+paragraph -> 1rem
+sm -> 0.833rem 
 
 <------------------- UI ERRORS -----------------> 
 
