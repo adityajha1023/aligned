@@ -13,21 +13,18 @@ function Header() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 items-center">
-          {["Home", "Services", "Projects", "FAQs"].map((item) => (
-            <li
-              key={item}
-              className="text-paragraph opacity-65 cursor-pointer hover:opacity-100 hover:scale-110 transition-all duration-300">
-              {item}
-            </li>
-          ))}
+          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="/">Home</a>
+          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="#about">About</a>
+          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="#services">Services</a>
+          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="#projects">Projects</a>
 
           {/* Contact Button */}
-          <li className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
+          <a href="#contact" className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
             <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#7795CC]" />
             <span className="relative block px-4 py-2 bg-white rounded-full text-[16px] font-medium">
               Contact Us
             </span>
-          </li>
+          </a>
         </ul>
 
         {/* Mobile Hamburger */}
@@ -39,15 +36,13 @@ function Header() {
       {/* Mobile Menu */}
       <div
         className={`md:hidden absolute rounded-b-[50px] top-[80px] left-0 w-full bg-white backdrop-blur-lg border-b border-[#ccc] transition-all duration-300 overflow-hidden
-        ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}
-      >
+        ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         <ul className="flex flex-col items-center gap-6 py-8">
           {["Home", "Services", "Projects", "FAQs"].map((item) => (
             <li
               key={item}
               onClick={() => setOpen(false)}
-              className="text-[18px] opacity-70 hover:opacity-100 transition"
-            >
+              className="text-[18px] opacity-70 hover:opacity-100 transition">
               {item}
             </li>
           ))}
