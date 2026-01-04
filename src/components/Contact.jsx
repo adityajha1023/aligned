@@ -4,7 +4,7 @@ function Contact() {
   const [service, setService] = useState("");
 
   return (
-    <section className="flex justify-center items-center min-h-[90vh] px-4">
+    <section className="flex justify-center items-center min-h-[90vh] mt-12 md:mt-0 px-4">
       <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center w-full max-w-[1400px] font-bricolage gap-12">
 
         {/* Left: Form */}
