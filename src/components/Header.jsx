@@ -5,7 +5,7 @@ function Header() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/50 backdrop-blur-lg border-b border-[#ccc] font-bricolage">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-lg border-b border-[#ccc] font-bricolage">
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-32">
         {/* Logo */}
