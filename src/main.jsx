@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx';
+import Project from './project1.jsx';
 
 const router=createBrowserRouter([
   {
@@ -12,7 +13,12 @@ const router=createBrowserRouter([
     element:<Layout />,
     children:[
       {
-        
+        path: '/',
+        element:  <App />
+      },
+      {
+        path: '/project1',
+        element: <Project  />
       }
     ]
   }

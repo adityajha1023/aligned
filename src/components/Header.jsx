@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
 import { Sling as Hamburger } from "hamburger-react";
 
 function Header() {
@@ -38,7 +39,7 @@ function Header() {
         className={`md:hidden absolute rounded-b-[50px] top-[80px] left-0 w-full bg-white backdrop-blur-lg border-b border-[#ccc] transition-all duration-300 overflow-hidden
         ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         <ul className="flex flex-col items-center gap-6 py-8">
-          {["Home", "Services", "Projects", "FAQs"].map((item) => (
+          {["Home", "About", "Services", "Projects"].map((item) => (
             <li
               key={item}
               onClick={() => setOpen(false)}
@@ -50,9 +51,9 @@ function Header() {
           {/* Mobile Contact Button */}
           <li className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
             <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#7795CC]" />
-            <span className="relative block px-6 py-2 bg-white rounded-full text-[16px] font-medium">
+            <Link to="#" className="relative block px-6 py-2 bg-white rounded-full text-[16px] font-medium">
               Contact Us
-            </span>
+            </Link>
           </li>
         </ul>
       </div>

@@ -73,7 +73,7 @@ const Card = ({ card }) => {
         </p>
       </div>
       <div className="absolute inset-0 z-10 gap-0 flex items-end flex-col justify-end p-6">
-        <Link to="#" className="text-white underline bg-white/20 rounded-full  p-2 backdrop-blur-xl">
+        <Link to={card.link} className="text-white underline bg-white/20 rounded-full  p-2 backdrop-blur-xl">
         <ArrowUpRight size={45} strokeWidth={0.8}/>
         </Link>
       </div>
@@ -89,17 +89,20 @@ const cards = [
     title: "Project Name",
     description: "Project description Project description Project description ",
     id: 1,
+    link: "./project1"
   },
   {
     url: "/imgs/abstract/2.jpg",
     title: "Title 2",
     description: "Project description Project description Project description ",
     id: 2,
+    link: "./project1"
   },
   {
     url: "/imgs/abstract/3.jpg",
     title: "Title 3",
     description: "Project description Project description Project description ",
     id: 3,
+    link: "./project1"
   },
 ];
