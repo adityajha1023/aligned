@@ -4,7 +4,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 sm:mt-32 px-12 font-bricolage">
+    <footer className="mt-24 sm:mt-32 px-6 md:px-12 font-bricolage">
       {/* Top Navigation */}
       <div className="flex flex-col sm:flex-row justify-between gap-10 sm:gap-0">
         {/* Menu */}
@@ -38,7 +38,7 @@ function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="flex flex-col sm:flex-row mb-1 justify-between items-center gap-2 sm:gap-0 text-parargaph">
+      <div className="flex flex-col sm:flex-row mb-1 justify-between items-center gap-2 sm:gap-0 text-paragraph">
         <p>©{currentYear} ALND. All rights reserved.</p>
         <p>info@aligned.com</p>
       </div>

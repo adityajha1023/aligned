@@ -9,7 +9,7 @@ function Header() {
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-32">
         {/* Logo */}
-        <img src="./logo.webp" alt="Logo" className="h-[48px]" />
+        <img src="./logo.webp" alt="Logo" loading="lazy" className="h-[48px]" />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 items-center">
