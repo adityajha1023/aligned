@@ -4,7 +4,7 @@ import { ChevronLeft } from 'lucide-react';
 
 function Project() {
   return (
-    <div className="h-auto font-bricolage mx-16 my-28">
+    <div className="h-auto font-bricolage mx-4 md:mx-16 my-28">
       <SmoothCursor />
 
         <div className='flex justify-center items-start flex-col'>
@@ -14,7 +14,7 @@ function Project() {
               <ChevronLeft strokeWidth={1.4} /> Back to Home
             </Link>
           </span>
-            <h2 className='text-h3 md:text-h3 font-[500] leading-tight mt-6 mb-2'>Overview</h2>
+            <h2 className='text-h3 md:text-h3 font-[500] leading-tight mt-5 md:mt-6 mb-2'>Overview</h2>
             <p className='text-paragraph font-[400]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus similique saepe in ea id dolorum consequatur voluptas quasi recusandae, iure sapiente alias est assumenda ab cupiditate placeat eveniet tempore obcaecati magni, non quae delectus!</p>
         </div>
         <div className='image-grid'>
