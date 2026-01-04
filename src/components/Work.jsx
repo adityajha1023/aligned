@@ -55,8 +55,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[83vh] w-[95vw] rounded-xl overflow-hidden bg-neutral-200"
-    >
+      className="group relative h-[83vh] w-[95vw] rounded-xl overflow-hidden bg-neutral-200">
       <div
         style={{
           backgroundImage: `url(${card.url})`,
@@ -69,7 +68,7 @@ const Card = ({ card }) => {
         <p className="text-h4 font-bricolage text-white">
           {card.title}
         </p>
-        <p className="text-paragraph font-bricolage max-w-[90%] text-white">
+        <p className="text-paragraph font-bricolage max-w-[80%] text-white">
           {card.description}
         </p>
       </div>
