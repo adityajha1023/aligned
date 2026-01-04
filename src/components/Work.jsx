@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import {Link} from 'react-router-dom';
 import project1 from "../assets/project1.png";
 import { ArrowUpRight } from "lucide-react";
@@ -24,12 +24,24 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-66.5%"]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", isMobile ? "-67.5%" : "-66.5%"]);
 
   return (
     <section ref={targetRef} className="relative -mt-16 h-[300vh]">
       <div className="sticky top-8 flex h-screen items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-16">
+        <motion.div style={{ x }} className="flex gap-8 md:gap-16">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
@@ -57,13 +69,13 @@ const Card = ({ card }) => {
         <p className="text-h4 font-bricolage text-white">
           {card.title}
         </p>
-        <p className="text-paragraph font-bricolage text-white">
+        <p className="text-paragraph font-bricolage max-w-[90%] text-white">
           {card.description}
         </p>
       </div>
       <div className="absolute inset-0 z-10 gap-0 flex items-end flex-col justify-end p-6">
         <Link to="#" className="text-white underline bg-white/20 rounded-full  p-2 backdrop-blur-xl">
-        <ArrowUpRight size={50} strokeWidth={0.8}/>
+        <ArrowUpRight size={45} strokeWidth={0.8}/>
         </Link>
       </div>
     </div>

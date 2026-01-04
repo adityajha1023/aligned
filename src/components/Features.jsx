@@ -34,7 +34,7 @@ export default function Services() {
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-3 z-10 w-full lg:w-auto">
           <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full w-fit text-sm">Services</span>
-          <h1 className="text-h2 font-[500] leading-tight">
+          <h1 className="text-h3 md:text-h2 font-[500] leading-tight">
             How can we help you?
           </h1>
 
@@ -47,14 +47,14 @@ export default function Services() {
                 onClick={() => setActive(s.id)}
                 className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
                 <span
-                  className={`text-h4 transition-all ${
+                  className={`text-h5 md:text-h4 transition-all ${
                     active === s.id ? "text-black" : "text-gray-300"
                   }`}>
                   {`0${s.id}`}
                 </span>
 
                 <h2
-                  className={`text-xl sm:text-2xl lg:text-3xl transition-all ${
+                  className={`text-h5 md:text-h4 transition-all ${
                     active === s.id
                       ? "text-black"
                       : "text-gray-400 opacity-40"
@@ -96,7 +96,7 @@ export default function Services() {
               transform =
                 "translate-x-20 sm:translate-x-28 lg:translate-x-32 translate-y-6 sm:translate-y-8 scale-90";
               z = "z-20";
-              opacity = "opacity-40";
+              opacity = "opacity-30";
               shadow = "shadow-md";
             }
 

@@ -12,9 +12,9 @@ function App() {
       <SmoothCursor />
       <Hero />
       <Features />
-      {/* <About />
+      <About />
       <Work />
-      <Contact /> */}
+      {/* <Contact /> */}
     </div>
   );
 }
