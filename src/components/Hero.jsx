@@ -29,8 +29,8 @@ function Hero() {
       <div
         className="
           relative w-full
-          h-[420px]
-          sm:h-[420px]
+          h-[350px]
+          sm:h-[450px]
           md:h-[500px]
           lg:h-[600px]
           mt-4 sm:mt-6

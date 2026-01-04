@@ -273,8 +273,12 @@ class Media {
       }
     }
     this.scale = this.screen.height / 1500;
-    this.plane.scale.y = (this.viewport.height * (900 * this.scale)) / this.screen.height;
-    this.plane.scale.x = (this.viewport.width * (700 * this.scale)) / this.screen.width;
+    // Responsive image dimensions - smaller on mobile
+    const baseHeight = this.screen.width < 768 ? 600 : 900;
+    const baseWidth = this.screen.width < 768 ? 500 : 700;
+    
+    this.plane.scale.y = (this.viewport.height * (baseHeight * this.scale)) / this.screen.height;
+    this.plane.scale.x = (this.viewport.width * (baseWidth * this.scale)) / this.screen.width;
     this.plane.program.uniforms.uPlaneSizes.value = [this.plane.scale.x, this.plane.scale.y];
     this.padding = 2;
     this.width = this.plane.scale.x + this.padding;
@@ -370,7 +374,9 @@ class App {
   onTouchMove(e) {
     if (!this.isDown) return;
     const x = e.touches ? e.touches[0].clientX : e.clientX;
-    const distance = (this.start - x) * (this.scrollSpeed * 0.025);
+    // Adjust sensitivity based on device - more sensitive for touch
+    const sensitivity = e.touches ? this.scrollSpeed * 0.035 : this.scrollSpeed * 0.025;
+    const distance = (this.start - x) * sensitivity;
     this.scroll.target = this.scroll.position + distance;
   }
   onTouchUp() {
@@ -394,16 +400,20 @@ class App {
       width: this.container.clientWidth,
       height: this.container.clientHeight
     };
-    this.renderer.setSize(this.screen.width, this.screen.height);
+    // Ensure minimum dimensions for mobile
+    const width = Math.max(this.screen.width, 320);
+    const height = Math.max(this.screen.height, 300);
+    
+    this.renderer.setSize(width, height);
     this.camera.perspective({
-      aspect: this.screen.width / this.screen.height
+      aspect: width / height
     });
     const fov = (this.camera.fov * Math.PI) / 180;
-    const height = 2 * Math.tan(fov / 2) * this.camera.position.z;
-    const width = height * this.camera.aspect;
-    this.viewport = { width, height };
+    const vpHeight = 2 * Math.tan(fov / 2) * this.camera.position.z;
+    const vpWidth = vpHeight * (width / height);
+    this.viewport = { width: vpWidth, height: vpHeight };
     if (this.medias) {
-      this.medias.forEach(media => media.onResize({ screen: this.screen, viewport: this.viewport }));
+      this.medias.forEach(media => media.onResize({ screen: { width, height }, viewport: this.viewport }));
     }
   }
   update() {
