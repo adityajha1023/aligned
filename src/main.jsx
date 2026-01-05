@@ -6,6 +6,17 @@ import ReactDOM from "react-dom/client";
 import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx';
 import Project from './project1.jsx';
+import Lenis from 'lenis'
+
+// Initialize Lenis
+const lenis = new Lenis({
+  autoRaf: true,
+});
+
+// Listen for the scroll event and log the event data
+lenis.on('scroll', (e) => {
+  console.log(e);
+});
 
 const router=createBrowserRouter([
   {
