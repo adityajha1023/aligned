@@ -67,14 +67,14 @@ export default function Services() {
         </div>
 
         {/* RIGHT IMAGE STACK */}
-        <div className="relative w-full max-w-[420px] sm:mt-40 mt-0 sm:max-w-[480px] lg:w-[520px] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center">
+        <div className="relative w-full max-w-[420px] sm:mt-40 mt-0 sm:max-w-[480px] lg:w-[520px] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center ">
           {services.map((s) => {
             const position = getPosition(s.id);
 
             if (Math.abs(position) > 1) return null;
 
             const base =
-              "absolute w-[200px] sm:w-[220px] lg:w-[260px] h-[260px] sm:h-[300px] lg:h-[320px] object-cover rounded-xl transition-all duration-500 ease-out";
+              "absolute w-[200px] sm:w-[220px] lg:w-[260px] h-[260px] sm:h-[300px] lg:h-[320px] object-cover rounded-xl transition-all duration-500 ease-out border border-[#ccc] rounded-2xl";
 
             let transform = "";
             let z = "";
