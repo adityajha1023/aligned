@@ -10,7 +10,7 @@ function Header() {
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-32">
         {/* Logo */}
-        <img src="./logo.webp" alt="Logo" loading="lazy" className="h-[48px]" />
+        <img src="./logo.webp" alt="Logo" loading="lazy" className="h-[20px]" />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 items-center">
@@ -21,7 +21,7 @@ function Header() {
 
           {/* Contact Button */}
           <a href="#contact" className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#7795CC]" />
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#1F2455]" />
             <span className="relative block px-4 py-2 bg-white rounded-full text-[16px] font-medium">
               Contact Us
             </span>
@@ -50,7 +50,7 @@ function Header() {
 
           {/* Mobile Contact Button */}
           <li className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#7795CC]" />
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#1F2455]" />
             <Link to="#" className="relative block px-6 py-2 bg-white rounded-full text-[16px] font-medium">
               Contact Us
             </Link>

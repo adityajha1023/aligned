@@ -6,7 +6,6 @@ import img1 from "../assets/sample1.png";
 import img2 from "../assets/sample2.png";
 import img3 from "../assets/sample3.png";
 import img4 from "../assets/sample4.png";
-import img5 from "../assets/sample5.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,8 +92,8 @@ export default function HorizontalInfiniteBentGallery() {
   }, []);
 
   const images = [
-    img1, img2, img3, img4, img5,
-    img1, img2, img3, img4, img5,
+    img1, img2, img3, img4, img2,
+    img1, img2, img3, img4, img2,
   ];
 
   return (
@@ -115,7 +114,7 @@ export default function HorizontalInfiniteBentGallery() {
                 flex-shrink-0
                 w-[180px] h-[260px]
                 sm:w-[220px] sm:h-[320px]
-                md:w-[250px] md:h-[350px]
+                md:w-[250px] md:h-[350px] border border-[#ccc] rounded-2xl
               "
             >
               <img

@@ -11,6 +11,7 @@ const Example = () => {
         <div className="flex flex-col justify-center items-center">
         <span className="border-2 border-[#ccc/70] px-3 py-1 rounded-full text-sm">Showcase</span>
         <h2 className="text-h2 font-[500] mt-3">Our Work</h2>
+        <p className="text-paragraph">A selection of brands we’ve brought into alignment</p>
         </div>
       </div>
       <HorizontalScrollCarousel />
