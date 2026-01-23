@@ -2,10 +2,12 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import img1 from "../assets/sample1.png";
-import img2 from "../assets/sample2.png";
-import img3 from "../assets/sample3.png";
-import img4 from "../assets/sample4.png";
+import img1 from "../assets/feature1.png";
+import img2 from "../assets/feature2.png";
+import img3 from "../assets/feature3.png"; 
+import img4 from "../assets/feature4.png";
+import img5 from "../assets/feature5.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,8 +94,8 @@ export default function HorizontalInfiniteBentGallery() {
   }, []);
 
   const images = [
-    img1, img2, img3, img4, img2,
-    img1, img2, img3, img4, img2,
+    img1, img2, img3, img4, img5,
+    img1, img2, img3, img4, img5,
   ];
 
   return (

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import feature1 from "../assets/feature1.png";
-import feature2 from "../assets/feature2.png";
-import feature3 from "../assets/feature3.png";
-import feature4 from "../assets/feature4.png";
-import feature5 from "../assets/feature5.png";
+import feature1 from "../assets/sample1.png";
+import feature2 from "../assets/sample2.png";
+import feature3 from "../assets/sample3.png";
+import feature4 from "../assets/sample4.png";
 
 export default function Services() {
   const [active, setActive] = useState(3);
@@ -13,7 +12,7 @@ export default function Services() {
     { id: 2, title: "Personal Branding", img: feature2 },
     { id: 3, title: "Social Media Marketing", img: feature3 },
     { id: 4, title: "Packaging & Branding", img: feature4 },
-    { id: 5, title: "Growth Marketing", img: feature5 },
+    { id: 5, title: "Growth Marketing", img: feature1 },
   ];
 
   const getPosition = (serviceId) => {
