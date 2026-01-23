@@ -9,10 +9,10 @@ export default function Services() {
 
   const services = [
     { id: 1, title: "Creative Visualisation", img: feature1 },
-    { id: 2, title: "Personal Branding", img: feature2 },
-    { id: 3, title: "Social Media Marketing", img: feature3 },
+    { id: 2, title: "Personal Branding", img: feature3 },
+    { id: 3, title: "Social Media Marketing", img: feature2 },
     { id: 4, title: "Packaging & Branding", img: feature4 },
-    { id: 5, title: "Growth Marketing", img: feature1 },
+    { id: 5, title: "Growth Marketing", img: feature2 },
   ];
 
   const getPosition = (serviceId) => {
