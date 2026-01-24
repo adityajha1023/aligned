@@ -10,7 +10,6 @@ function Project() {
   return (
     <div className="h-auto font-bricolage mx-4 md:mx-16 my-28">
       <SmoothCursor />
-
         <div className='flex justify-center items-start flex-col'>
             <span className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer shadow-md">
             <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#1F2455]" />
