@@ -25,13 +25,13 @@ function Project() {
         <div className="min-h-screen bg-[#f7f3cd] flex justify-center items-start">
       <div className="w-full py-10">
         {/* Top large card */}
-        <div className="bg-[#dedede] rounded-2xl h-[360px] mb-6" />
+        <div className="bg-[#000] rounded-2xl h-[360px] mb-6" />
           {/* Bottom row */}
           <div className="grid grid-cols-12 gap-6">
           {/* Left small card */}
-          <div className="col-span-12 md:col-span-4 bg-[#dedede] rounded-2xl h-[260px]" />
+          <div className="col-span-12 md:col-span-4 bg-[#000] rounded-2xl h-[260px]" />
           {/* Right wide card */}
-          <div className="col-span-12 md:col-span-8 bg-[#dedede] rounded-2xl h-[260px]" />
+          <div className="col-span-12 md:col-span-8 bg-[#000] rounded-2xl h-[260px]" />
         </div>
 
       </div>
