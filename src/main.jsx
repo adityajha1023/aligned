@@ -6,6 +6,7 @@ import ReactDOM from "react-dom/client";
 import {createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Layout.jsx';
 import Project from './project1.jsx';
+import NotFound from './components/NotFound.jsx';
 import Lenis from 'lenis'
 
 // Initialize Lenis
@@ -30,6 +31,10 @@ const router=createBrowserRouter([
       {
         path: '/project1',
         element: <Project  />
+      },
+      {
+        path: '*',
+        element: <NotFound />
       }
     ]
   }
