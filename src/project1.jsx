@@ -22,7 +22,7 @@ function Project() {
             <p className='text-paragraph font-[400]'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus similique saepe in ea id dolorum consequatur voluptas quasi recusandae, iure sapiente alias est assumenda ab cupiditate placeat eveniet tempore obcaecati magni, non quae delectus!</p>
         </div>
         {/* Project Images */}
-        <div className="min-h-screen bg-[#faf9f7] flex justify-center items-start">
+        <div className="min-h-screen bg-[#f7f3cd] flex justify-center items-start">
       <div className="w-full py-10">
         {/* Top large card */}
         <div className="bg-[#dedede] rounded-2xl h-[360px] mb-6" />
