@@ -99,10 +99,10 @@ export default function HorizontalInfiniteBentGallery() {
   ];
 
   return (
-    <section className="relative w-full overflow-x-hidden ">
+    <section className="relative w-full overflow-hidden ">
       <div
         ref={wrapperRef}
-        className="relative w-full h-fit md::h-[90vh] pt-10 pb-0 md:pb-48 flex items-center overflow-x-hidden"
+        className="relative w-full h-fit pt-10 pb-0 md:pb-48 flex items-center overflow-hidden"
       >
         <div
           ref={trackRef}
