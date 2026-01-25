@@ -15,13 +15,13 @@ function Contact() {
           </span>
 
           <form className="flex flex-col mt-8">
-            <input required type="text" placeholder="Your Name" className="outline-none bg-transparent border-b-2 border-gray-200 w-full max-w-[25rem] py-4 px-1 text-gray-500 text-paragraph"/>
-            <input required type="email" placeholder="Your Email" className="outline-none bg-transparent border-b-2 border-gray-200 w-full max-w-[25rem] mt-8 py-4 px-1 text-gray-500 text-paragraph"/>
+            <input required type="text" placeholder="Your Name" className="outline-none bg-transparent border-b-2 border-[#A8A8A8] w-full max-w-[25rem] py-4 px-1 text-[#606060] text-paragraph"/>
+            <input required type="email" placeholder="Your Email" className="outline-none bg-transparent border-b-2 border-[#A8A8A8] w-full max-w-[25rem] mt-8 py-4 px-1 text-[#606060] text-paragraph"/>
             <select
               required
               value={service}
               onChange={(e) => setService(e.target.value)}
-              className="outline-none bg-transparent border-b-2 border-gray-200 w-full max-w-[25rem] mt-8 py-4 text-gray-500 text-paragraph">
+              className="outline-none bg-transparent border-b-2 border-[#A8A8A8] w-full max-w-[25rem] mt-8 py-4 text-[#606060] text-paragraph">
               <option value="">Select Service</option>
               <option value="Creative Visualisation">Creative Visualisation</option>
               <option value="Personal Branding">Personal Branding</option>

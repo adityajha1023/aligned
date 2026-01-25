@@ -4,10 +4,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import img1 from "../assets/feature1.png";
 import img2 from "../assets/feature2.png";
-import img3 from "../assets/feature3.png"; 
+import img3 from "../assets/feature3.png";
 import img4 from "../assets/feature4.png";
 import img5 from "../assets/feature5.png";
-
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,17 +41,17 @@ export default function HorizontalInfiniteBentGallery() {
           scrub: 1,
         },
         modifiers: {
-          x: x => `${parseFloat(x) % totalWidth}px`,
+          x: (x) => `${parseFloat(x) % totalWidth}px`,
         },
         onUpdate: bendItems,
       });
 
       function bendItems() {
-        const radius = isMobile ? 600 : 1400; // flatter on mobile
+        const radius = isMobile ? 600 : 1400;
         const rotationMultiplier = isMobile ? 0.6 : 1;
         const viewportCenter = window.innerWidth / 2;
 
-        items.forEach(item => {
+        items.forEach((item) => {
           if (!item) return;
 
           const rect = item.getBoundingClientRect();
@@ -99,10 +98,10 @@ export default function HorizontalInfiniteBentGallery() {
   ];
 
   return (
-    <section className="relative w-full overflow-hidden ">
+    <section className="relative w-full overflow-hidden">
       <div
         ref={wrapperRef}
-        className="relative w-full h-fit pt-10 pb-0 md:pb-48 flex items-center overflow-hidden"
+        className="relative w-full h-fit pt-10 pb-5 md:pb-48 flex items-center overflow-hidden"
       >
         <div
           ref={trackRef}
@@ -111,17 +110,21 @@ export default function HorizontalInfiniteBentGallery() {
           {images.map((img, i) => (
             <div
               key={i}
-              ref={el => (itemsRef.current[i] = el)}
+              ref={(el) => (itemsRef.current[i] = el)}
               className="
                 flex-shrink-0
                 w-[180px] h-[260px]
                 sm:w-[220px] sm:h-[320px]
-                md:w-[250px] md:h-[350px] border border-[#ccc] rounded-2xl
+                md:w-[250px] md:h-[350px]
+                border border-[#ccc] rounded-2xl
               "
             >
               <img
                 src={img}
                 alt=""
+                loading="lazy"
+                decoding="async"
+                sizes="(max-width: 640px) 180px, (max-width: 768px) 220px, 250px"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>

@@ -10,10 +10,10 @@ function Footer() {
         {/* Menu */}
         <div className="flex flex-col gap-1">
           <h4 className="text-h6 font-[500] py-2">Menu</h4>
-          <a href="#" className="opacity-70 text-paragraph hover:opacity-100 transition">
+          <a href="#" className="text-paragraph hover:text-black transition text-[#606060]">
             Work
           </a>
-          <a href="#" className="opacity-70 text-paragraph hover:opacity-100 transition">
+          <a href="#" className="text-paragraph hover:text-black transition text-[#606060]">
             Contact
           </a>
         </div>
@@ -21,10 +21,10 @@ function Footer() {
         {/* Socials */}
         <div className="flex flex-col gap-1 sm:text-right">
           <h4 className="text-h6 font-[500] py-2">Socials</h4>
-          <a href="#" className="opacity-70 hover:opacity-100 transition">
+          <a href="#" className="text-paragraph hover:text-black transition text-[#606060]">
             Instagram
           </a>
-          <a href="#" className="opacity-70 hover:opacity-100 transition">
+          <a href="#" className="text-paragraph hover:text-black transition text-[#606060]">
             Email
           </a>
         </div>
@@ -32,7 +32,7 @@ function Footer() {
 
       {/* Brand */}
       <div className="flex justify-center items-center my-2">
-        <h1 className="font-semibold font-cairo text-[120px] sm:text-[180px] lg:text-[250px] opacity-10">
+        <h1 className="font-semibold font-cairo text-[120px] sm:text-[180px] lg:text-[250px] opacity-20">
          ALN'D
         </h1>
       </div>

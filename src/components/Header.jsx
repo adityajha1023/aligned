@@ -6,7 +6,7 @@ function Header() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white backdrop-blur-lg border-b border-[#ccc] font-bricolage">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-[#a8a8a8] font-bricolage">
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-32">
         {/* Logo */}
@@ -14,10 +14,10 @@ function Header() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 items-center">
-          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="/">Home</a>
-          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="#about">About</a>
-          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="#services">Services</a>
-          <a className="relative block rounded-full text-paragraph text-gray-500 hover:text-black hover:scale-105 duration-300 transition" href="#projects">Projects</a>
+          <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="/">Home</a>
+          <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#about">About</a>
+          <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#services">Services</a>
+          <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#projects">Projects</a>
 
           {/* Contact Button */}
           <a href="#contact" className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
