@@ -47,7 +47,7 @@ export default function Services() {
                 className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
                 <span
                   className={`text-h5 md:text-h4 transition-all ${
-                    active === s.id ? "text-black font-medium" : "text-[#A8A8A8]" 
+                    active === s.id ? "text-black font-medium" : "text-[#A8A8A8] font-normal" 
                   }`}>
                   {`0${s.id}`}
                 </span>
@@ -56,7 +56,7 @@ export default function Services() {
                   className={`text-h5 md:text-h4 transition-all duration-300 ${
                     active === s.id
                       ? "text-black font-medium"
-                      : "text-[#A8A8A8]"
+                      : "text-[#A8A8A8] font-normal"
                   }`}>
                   {s.title}
                 </h2>
