@@ -25,7 +25,7 @@ const WorkCursor = ({ active }) => {
 
   return (
     <div
-      className="pointer-events-none fixed z-[9999] -translate-x-1/2 -translate-y-1/2"
+      className="pointer-events-none fixed z-[99] -translate-x-1/2 -translate-y-1/2"
       style={{ left: position.x, top: position.y }}
     >
       <div className="flex flex-col items-center gap-3">

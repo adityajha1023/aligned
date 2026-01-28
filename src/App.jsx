@@ -9,7 +9,7 @@ import { SmoothCursor } from "@/components/ui/smooth-cursor"
 function App() {
   return (
     <div className="h-auto">
-      <SmoothCursor />
+      <SmoothCursor style={{ zIndex: 9999 }} />
       <Hero />
       <Features />
       <About />
