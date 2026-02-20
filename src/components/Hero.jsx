@@ -12,7 +12,7 @@ function Hero() {
       <div className="pt-36 md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-start md:items-center gap-3 text-center font-bricolage">
 
         {/* Badge */}
-        <p className="border border-[#ccc/70] px-3 py-1 rounded-full text-sm">
+        <p className="border border-[#A8A8A8] px-3 py-1 rounded-full text-sm">
           with ALN'D
         </p>
 
