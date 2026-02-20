@@ -1,22 +1,46 @@
-import React from 'react'
-import Hero from './components/Hero';
-import Features from './components/Features';
-import About from './components/About';
-import Work from './components/Work';
-import Contact from './components/Contact';
-import { SmoothCursor } from "@/components/ui/smooth-cursor"
+import React, { lazy, Suspense, useEffect, useState } from "react";
+
+const Hero = lazy(() => import("./components/Hero"));
+const Features = lazy(() => import("./components/Features"));
+const About = lazy(() => import("./components/About"));
+const Work = lazy(() => import("./components/Work"));
+const Contact = lazy(() => import("./components/Contact"));
+
+// const SmoothCursor = lazy(() =>
+//   import("@/components/ui/smooth-cursor").then((module) => ({
+//     default: module.SmoothCursor,
+//   }))
+// );
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkScreen(); // run on mount
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
   return (
     <div className="h-auto">
-      <SmoothCursor style={{ zIndex: 9999 }} />
-      <Hero />
-      <Features />
-      <About />
-      <Work />
-      <Contact />
+      {/* <Suspense fallback={null}>
+        {!isMobile && <SmoothCursor style={{ zIndex: 9999 }} />}
+      </Suspense> */}
+
+      <Suspense fallback={null}>
+        <Hero />
+        <Features />
+        <About />
+        <Work />
+        <Contact />
+      </Suspense>
     </div>
   );
 }
 
-export default App; 
+export default App;

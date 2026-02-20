@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import feature1 from "../assets/sample1.png";
-import feature2 from "../assets/sample2.png";
-import feature3 from "../assets/sample3.png";
-import feature4 from "../assets/sample4.png";
+import feature1 from "../assets/sample1.webp";
+import feature2 from "../assets/sample2.webp";
+import feature3 from "../assets/sample3.webp";
+import feature4 from "../assets/sample4.webp";
 
 export default function Services() {
   const [active, setActive] = useState(3);
@@ -104,6 +104,8 @@ export default function Services() {
                 key={s.id}
                 src={s.img}
                 alt={s.title}
+                loading="lazy"
+                decoding="async"
                 className={`${base} ${transform} ${z} ${opacity} ${shadow}`}
               />
             );

@@ -1,7 +1,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import project1 from "../assets/project1.png";
+import project1 from "../assets/project1.webp";
 import { ArrowUpRight } from "lucide-react";
 
 /* =========================

@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom'
 import { SmoothCursor } from "@/components/ui/smooth-cursor"
 import { ChevronLeft } from 'lucide-react';
-import p1 from "./assets/project-p1.png";
-import p2 from "./assets/project-p2.png";
-import p3 from "./assets/project-p3.png";
+import p1 from "./assets/project-p1.webp";
+import p2 from "./assets/project-p2.webp";
+import p3 from "./assets/project-p3.webp";
 
 
 function Project() {

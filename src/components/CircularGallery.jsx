@@ -2,11 +2,11 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import img1 from "../assets/feature1.png";
-import img2 from "../assets/feature2.png";
-import img3 from "../assets/feature3.png";
-import img4 from "../assets/feature4.png";
-import img5 from "../assets/feature5.png";
+import img1 from "../assets/feature1.webp";
+import img2 from "../assets/feature2.webp";
+import img3 from "../assets/feature3.webp";
+import img4 from "../assets/feature4.webp";
+import img5 from "../assets/feature5.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,10 +25,10 @@ export default function HorizontalInfiniteBentGallery() {
     wrapper.style.overflowX = "hidden";
 
     let isMobile = window.innerWidth < 768;
+    let viewportCenter = window.innerWidth / 2;
+    let totalWidth = track.scrollWidth / 2;
 
     const ctx = gsap.context(() => {
-      let totalWidth = track.scrollWidth / 2;
-
       gsap.set(track, { x: 0 });
 
       const tween = gsap.to(track, {
@@ -49,19 +49,22 @@ export default function HorizontalInfiniteBentGallery() {
       function bendItems() {
         const radius = isMobile ? 600 : 1400;
         const rotationMultiplier = isMobile ? 0.6 : 1;
-        const viewportCenter = window.innerWidth / 2;
 
         items.forEach((item) => {
           if (!item) return;
 
-          const rect = item.getBoundingClientRect();
-          const itemCenter = rect.left + rect.width / 2;
+          // 🔥 NO getBoundingClientRect
+          const itemCenter =
+            item.offsetLeft +
+            item.offsetWidth / 2 +
+            gsap.getProperty(track, "x");
 
           const distance = itemCenter - viewportCenter;
           const angle = distance / radius;
 
           const y = radius * (1 - Math.cos(angle));
-          const rotation = angle * (180 / Math.PI) * rotationMultiplier;
+          const rotation =
+            angle * (180 / Math.PI) * rotationMultiplier;
 
           gsap.set(item, {
             y,
@@ -75,6 +78,7 @@ export default function HorizontalInfiniteBentGallery() {
 
       const handleResize = () => {
         isMobile = window.innerWidth < 768;
+        viewportCenter = window.innerWidth / 2;
         totalWidth = track.scrollWidth / 2;
         tween.invalidate().restart();
         bendItems();
@@ -87,9 +91,7 @@ export default function HorizontalInfiniteBentGallery() {
       };
     }, wrapper);
 
-    return () => {
-      ctx.revert();
-    };
+    return () => ctx.revert();
   }, []);
 
   const images = [
