@@ -30,7 +30,7 @@ function Contact() {
               <option value="Growth Marketing">Growth Marketing</option>
             </select>
 
-            <button type="submit" className="mt-10 w-full max-w-[25rem] bg-black rounded-full py-3 text-white text-paragraph font-medium shadow-md hover:scale-105 transition-all"> 
+            <button type="submit" className="mt-10 w-full max-w-[25rem] bg-black rounded-full py-3 text-white text-paragraph font-medium shadow-md hover:scale-105 transition-transform duration-200"> 
                 Start the Conversation
             </button>
           </form>

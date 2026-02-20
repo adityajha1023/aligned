@@ -15,13 +15,10 @@ function Hero() {
         <p className="border border-[#A8A8A8] px-3 py-1 rounded-full text-sm">
           with ALN'D
         </p>
-
         {/* Heading */}
         <h1 className="text-h2 md:text-h1 text-left md:text-center font-[500] leading-tight max-w-[100%] lg:max-w-4xl">
-
           <span className="text-[#3A4DA7]">Strategic </span>
           in thought.{" "}
-
           <span className="inline-flex items-center gap-2">
             Artful
             <img
