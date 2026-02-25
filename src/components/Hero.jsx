@@ -9,38 +9,16 @@ function Hero() {
     <div className="w-full">
 
       {/* Hero Content */}
-      <div className="pt-36 md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-start md:items-center gap-3 text-center font-bricolage">
+      <div className="pt-40 md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-start md:items-center gap-3 text-center font-bricolage">
 
-        {/* Badge */}
-        <p className="border border-[#A8A8A8] px-3 py-1 rounded-full text-sm">
-          with ALN'D
-        </p>
         {/* Heading */}
-        <h1 className="text-h2 md:text-h1 text-left md:text-center font-[500] leading-tight max-w-[100%] lg:max-w-4xl">
-          <span className="text-[#3A4DA7]">Strategic </span>
-          in thought.{" "}
-          <span className="inline-flex items-center gap-2">
-            Artful
-            <img
-              src={heroImg}
-              alt="hero"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-              className="h-9 sm:h-10 md:h-12 rounded-full object-cover"
-            />
-          </span>{" "}
-
-          in execution. Always
-          <span className="text-[#3A4DA7]"> ALIGNED.</span>
-
+        <h1 className="text-h2 mt-2 md:text-h1 text-left md:text-center font-[500] leading-tight tracking-tight max-w-[100%] lg:max-w-4xl">
+          We Build B2B Brands <br /> & The Leaders Behind Them.
         </h1>
-
+        {/* Paragraph */}
+        <p className="opacity-70 tracking-normal text-paragraph mt-2 w-[40%]">Strategic positioning and identity systems, built in partnership with founders and executive teams.</p>
         {/* CTA */}
-        <a
-          href="/#contact"
-          className="bg-black rounded-full mt-4 px-5 sm:px-6 py-2.5 sm:py-3 text-white text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200"
-        >
+        <a href="/#contact" className="bg-black rounded-full mt-4 px-5 sm:px-6 py-2.5 sm:py-3 text-white text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200">
           Get in Touch
         </a>
 
