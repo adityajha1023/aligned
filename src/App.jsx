@@ -34,8 +34,8 @@ function App() {
 
       <Suspense fallback={null}>
         <Hero />
-        <Features />
         <About />
+        <Features />
         <Work />
         <Contact />
       </Suspense>
