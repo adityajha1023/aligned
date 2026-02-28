@@ -38,6 +38,7 @@ function App() {
         <About />
         <Features />
         <Cta />
+        <Work />
         <Contact />
       </Suspense>
     </div>
