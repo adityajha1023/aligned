@@ -4,7 +4,7 @@ function About() {
     const textContent = "Strong brands are shaped from the top down. Most agencies focus on visibility. We align company positioning with executive presence - as one system."
     const words = textContent.split(' ')
     
-    const [wordOpacities, setWordOpacities] = useState(Array(words.length).fill(0.5))
+    const [wordOpacities, setWordOpacities] = useState(Array(words.length).fill(0.3))
     const sectionRef = useRef(null)
 
     useEffect(() => {
@@ -25,15 +25,15 @@ function About() {
                 const wordStartProgress = index * wordSlotSize
                 const wordEndProgress = wordStartProgress + wordSlotSize
                 
-                // Fade from 0.5 to 1.0 as we pass the word's progress range
+                // Fade from 0.3 to 1.0 as we pass the word's progress range
                 if (scrollProgress < wordStartProgress) {
-                    return 0.5 // Before this word's turn, opacity is 70%
+                    return 0.3 // Before this word's turn, opacity is 70%
                 } else if (scrollProgress >= wordEndProgress) {
                     return 1.0 // Word has finished fading, 100% opacity
                 } else {
-                    // Smoothly transition from 0.5 to 1.0 during this word's turn
+                    // Smoothly transition from 0.3 to 1.0 during this word's turn
                     const wordProgress = (scrollProgress - wordStartProgress) / wordSlotSize
-                    return 0.5 + (wordProgress * 0.3)
+                    return 0.3 + (wordProgress * 0.3)
                 }
             })
 
@@ -45,7 +45,7 @@ function About() {
     }, [words.length])
 
     return (
-        <div ref={sectionRef} className='pt-40 h-[100vh] md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-center justify-center md:items-center gap-3 text-center font-bricolage'>
+        <div ref={sectionRef} className='pt-40 h-[90vh] md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-center justify-center md:items-center gap-3 text-center font-bricolage'>
             <h1 className='text-h2 w-[70%] tracking-tight font-medium'>
                 {words.map((word, index) => (
                     <span 

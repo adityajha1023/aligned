@@ -28,12 +28,12 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full h-[100vh] font-bricolage">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-72 px-4 sm:px-8 py-20">
+    <section className="w-full h-[80vh] flex justify-center items-center font-bricolage">
+      <div className="mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-80 px-16 py-20">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-3 z-10 w-full lg:w-auto">
           <span className="border-2 border-[#A8A8A8] px-3 py-1 rounded-full w-fit text-sm">Services</span>
-          <h1 className="text-h3 md:text-h2 font-[500] leading-tight">
+          <h1 className="text-h3 md:text-h2 font-[500] leading-tight tracking-tight">
             How can we help you?
           </h1>
 
@@ -47,16 +47,16 @@ export default function Services() {
                 className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
                 <span
                   className={`text-h5 md:text-h4 transition-all ${
-                    active === s.id ? "text-black font-medium" : "text-[#A8A8A8] font-normal" 
+                    active === s.id ? "text-black font-medium" : "text-black/30 font-normal" 
                   }`}>
                   {`0${s.id}`}
                 </span>
 
                 <h2
-                  className={`text-h5 md:text-h4 transition-all duration-300 ${
+                  className={`text-h5 md:text-h4 tracking-tight transition-all duration-300 ${
                     active === s.id
                       ? "text-black font-medium"
-                      : "text-[#A8A8A8] font-normal"
+                      : "text-black/30 font-normal"
                   }`}>
                   {s.title}
                 </h2>
