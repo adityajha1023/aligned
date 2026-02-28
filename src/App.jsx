@@ -3,6 +3,7 @@ import React, { lazy, Suspense, useEffect, useState } from "react";
 const Hero = lazy(() => import("./components/Hero"));
 const Features = lazy(() => import("./components/Features"));
 const About = lazy(() => import("./components/About"));
+const Cta = lazy(() => import("./components/Cta"));
 const Work = lazy(() => import("./components/Work"));
 const Contact = lazy(() => import("./components/Contact"));
 
@@ -36,7 +37,7 @@ function App() {
         <Hero />
         <About />
         <Features />
-        <Work />
+        <Cta />
         <Contact />
       </Suspense>
     </div>
