@@ -74,7 +74,6 @@ export default function Services() {
 
             const base =
               "absolute w-[200px] sm:w-[220px] lg:w-[260px] h-[260px] sm:h-[300px] lg:h-[320px] object-cover rounded-xl transition-all duration-500 ease-out border border-[#ccc] rounded-2xl";
-
             let transform = "";
             let z = "";
             let opacity = "";
