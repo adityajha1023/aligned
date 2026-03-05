@@ -7,6 +7,7 @@ const Cta = lazy(() => import("./components/Cta"));
 const Work = lazy(() => import("./components/Work"));
 const Contact = lazy(() => import("./components/Contact"));
 const Bento = lazy(() => import("./components/Bento"));
+const Questions = lazy(() => import("./components/Questions"));
 
 // const SmoothCursor = lazy(() =>
 //   import("@/components/ui/smooth-cursor").then((module) => ({
@@ -41,6 +42,7 @@ function App() {
         <Cta />
         <Work />
         <Bento />
+        <Questions />
         <Contact />
       </Suspense>
     </div>

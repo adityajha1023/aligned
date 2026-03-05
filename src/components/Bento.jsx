@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Bento() {
   return (
-    <div className="w-full h-[100vh] flex flex-col justify-center gap-20 items-center px-4 font-bricolage">
+    <div className="w-full h-[100vh] flex flex-col justify-center gap-20 items-center px-4 font-bricolage mt-20">
         <div className="flex flex-col justify-center items-center">
         <h1 className="text-h2 font-[500] leading-tight tracking-tight capitalize mt-2">
            Strategic expertise you can build on
