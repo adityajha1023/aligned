@@ -45,7 +45,7 @@ function About() {
     }, [words.length])
 
     return (
-        <div ref={sectionRef} className='pt-40 h-[90vh] md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-center justify-center md:items-center gap-3 text-center font-bricolage'>
+        <div ref={sectionRef} className='h-[100vh] px-4 sm:px-6 flex flex-col items-center justify-center md:items-center gap-3 text-center font-bricolage'>
             <h1 className='text-h2 w-[70%] tracking-tight font-medium'>
                 {words.map((word, index) => (
                     <span 

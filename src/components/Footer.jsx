@@ -4,7 +4,7 @@ function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 sm:mt-32 mx-16 font-bricolage">
+    <footer className="mx-16 font-bricolage">
       {/* Top Navigation */}
       <div className="flex flex-col sm:flex-row justify-between gap-10 sm:gap-0">
         {/* Menu */}

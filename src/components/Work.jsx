@@ -8,7 +8,7 @@ import Work5 from "../assets/feature5.webp";
 
 function Work () {
     return (
-        <div className="w-full h-[100vh] flex flex-col justify-center gap-40 items-center pt-10 px-4 font-bricolage">
+        <div className="w-full h-[100vh] flex flex-col justify-center gap-40 items-center px-4 font-bricolage">
           <div className="flex flex-col justify-center items-center">
           <span className="border-2 border-[#A8A8A8] px-3 py-1 rounded-full w-fit text-sm">Showcase</span>
           <h1 className="text-h2 font-[500] leading-tight tracking-tight capitalize mt-2">
