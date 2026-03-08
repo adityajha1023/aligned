@@ -17,7 +17,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route element={<Layout />}>
 
           <Route path="/" element={<App />} />
-          <Route path="/project1" element={<Project1 />} />
 
         </Route>
 

@@ -3,7 +3,7 @@ import questionspng from '../assets/question.png'
 
 export default function Questions() {
   return (
-    <div className="w-full h-[100vh] max-h-[100vh] flex-col justify-center items-start px-28 font-bricolage mt-20">
+    <div className="w-full h-[100vh] max-h-[100vh] flex flex-col justify-center items-start px-28 font-bricolage mt-20">
         <h2 className='text-h2 font-medium text-[#1F2455]'>
             The questions <span className='opacity-40 text-black'>founders and CXOs <br /> bring to us most often.</span>
         </h2>
