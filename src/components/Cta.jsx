@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 function Cta() {
   return (
-
     <section className="w-full h-[100vh] max-h-[100vh] flex justify-center items-center px-4 font-bricolage">
       <div className="relative w-full h-[70vh] bg-[#D0E8F6]/80 rounded-3xl overflow-hidden px-12 py-16 mx-16 flex items-center">
         
@@ -57,8 +56,7 @@ function Cta() {
           </div>
         </div>
       </div>
-    </section>
-    
+    </section>    
   )
 }
 export default Cta;

@@ -9,6 +9,7 @@ const Contact = lazy(() => import("./components/Contact"));
 const Bento = lazy(() => import("./components/Bento"));
 const Questions = lazy(() => import("./components/Questions"));
 const Challenges = lazy(() => import("./components/Challenges"));
+const Cta2 = lazy(() => import("./components/Cta2"));
 
 /* Loading skeleton for sections */
 function SectionLoader() {
@@ -65,6 +66,10 @@ function App() {
 
       <Suspense fallback={<SectionLoader />}>
         <Challenges />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <Cta2 />
       </Suspense>
 
       <Suspense fallback={<SectionLoader />}>

@@ -7,7 +7,6 @@ import "./index.css";
 
 /* 🔥 Lazy load pages */
 const App = lazy(() => import("./App"));
-const Project1 = lazy(() => import("./project1"));
 const NotFound = lazy(() => import("./components/NotFound"));
 
 /* Loading skeleton component for smooth transitions */
