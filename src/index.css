@@ -2,11 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: #F7F3CD;
-    /* cursor: none; */
+/* Performance optimizations */
+html {
+  font-display: swap;
+  scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+body {
+  background-color: #F7F3CD;
+  font-family: 'Bricolage Grotesque', 'Cairo', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar while keeping all functionality */
+::-webkit-scrollbar {
   display: none;
+}
+
+/* Remove scrollbar for Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* Optimize images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent layout shift during image loading */
+img[loading="lazy"] {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Optimize link performance */
+a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Improve text rendering */
+body, button, input, select, textarea {
+  font-feature-settings: "kern" 1;
+  font-kerning: auto;
+}
+
+/* Reduce cumulative layout shift */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Optimize animations */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }

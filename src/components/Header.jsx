@@ -1,16 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, memo, useCallback } from "react";
 import {Link} from 'react-router-dom';
 import { Sling as Hamburger } from "hamburger-react";
 
-function Header() {
+const Header = memo(function Header() {
   const [isOpen, setOpen] = useState(false);
 
+  const handleMenuClose = useCallback(() => {
+    setOpen(false);
+  }, []);
+
+  const handleToggle = useCallback((state) => {
+    setOpen(state);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-lg border-b border-[#a8a8a8] font-bricolage">
+    <header className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-lg border-b border-[#a8a8a8] font-bricolage">
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-32">
         {/* Logo */}
-        <img src="./logo.webp" alt="Logo" loading="lazy" className="h-[150px]" />
+        <img 
+          src="./logo.webp" 
+          alt="Logo" 
+          loading="eager" 
+          className="h-[150px]"
+          fetchPriority="high"
+        />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-10 items-center">
@@ -30,7 +44,7 @@ function Header() {
 
         {/* Mobile Hamburger */}
         <div className="md:hidden">
-          <Hamburger toggled={isOpen} toggle={setOpen} size={22} />
+          <Hamburger toggled={isOpen} toggle={handleToggle} size={22} />
         </div>
       </div>
 
@@ -42,7 +56,7 @@ function Header() {
           {["Home", "About", "Services", "Projects"].map((item) => (
             <li
               key={item}
-              onClick={() => setOpen(false)}
+              onClick={handleMenuClose}
               className="text-[18px] opacity-70 hover:opacity-100 transition">
               {item}
             </li>
@@ -59,6 +73,6 @@ function Header() {
       </div>
     </header>
   );
-}
+});
 
 export default Header;

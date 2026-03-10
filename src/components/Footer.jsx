@@ -1,10 +1,10 @@
-import React from "react";
+import React, { memo } from "react";
 
-function Footer() {
+const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="mx-16 font-bricolage">
+    <footer className="mx-16 font-bricolage py-12">
       {/* Top Navigation */}
       <div className="flex flex-col sm:flex-row justify-between gap-10 sm:gap-0">
         {/* Menu */}
@@ -40,10 +40,10 @@ function Footer() {
       {/* Bottom Bar */}
       <div className="flex flex-col sm:flex-row mb-1 justify-between items-center gap-2 sm:gap-0 text-paragraph">
         <p>©{currentYear} ALND. All rights reserved.</p>
-        <p className="underline underline-offset-2">info@aligned.com</p>
+        <a href="mailto:info@aligned.com" className="underline underline-offset-2 hover:text-black transition">info@aligned.com</a>
       </div>
     </footer>
   );
-}
+});
 
 export default Footer;

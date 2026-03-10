@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useEffect, useState } from "react";
+import React, { lazy, Suspense, useEffect, useState, memo } from "react";
 
 const Hero = lazy(() => import("./components/Hero"));
 const Features = lazy(() => import("./components/Features"));
@@ -10,11 +10,12 @@ const Bento = lazy(() => import("./components/Bento"));
 const Questions = lazy(() => import("./components/Questions"));
 const Challenges = lazy(() => import("./components/Challenges"));
 
-// const SmoothCursor = lazy(() =>
-//   import("@/components/ui/smooth-cursor").then((module) => ({
-//     default: module.SmoothCursor,
-//   }))
-// );
+/* Loading skeleton for sections */
+function SectionLoader() {
+  return (
+    <div className="w-full h-96 bg-gradient-to-b from-[#F7F3CD]/40 to-[#F7F3CD] animate-pulse rounded-lg" />
+  );
+}
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
@@ -31,24 +32,46 @@ function App() {
   }, []);
 
   return (
-    <div className="h-auto">
-      {/* <Suspense fallback={null}>
-        {!isMobile && <SmoothCursor style={{ zIndex: 9999 }} />}
-      </Suspense> */}
-
-      <Suspense fallback={null}>
+    <div className="h-auto w-full">
+      {/* Hero Section - Priority load */}
+      <Suspense fallback={<SectionLoader />}>
         <Hero />
+      </Suspense>
+
+      {/* Other sections with lazy loading */}
+      <Suspense fallback={<SectionLoader />}>
         <About />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Features />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Cta />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Work />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Bento />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Questions />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Challenges />
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
         <Contact />
       </Suspense>
     </div>
   );
 }
 
-export default App;
+export default memo(App);

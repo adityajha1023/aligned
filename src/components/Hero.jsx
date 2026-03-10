@@ -4,12 +4,12 @@ import heroImg from "../assets/hero_image.webp";
 /* Lazy load heavy gallery */
 const CircularGallery = lazy(() => import("./CircularGallery"));
 
-function Hero() {
+const Hero = memo(function Hero() {
   return (
     <div className="w-full">
 
       {/* Hero Content */}
-      <div className="pt-40 md:pt-26 sm:pt-32 px-4 sm:px-6 flex flex-col items-start md:items-center gap-3 text-center font-bricolage">
+      <div className="pt-10 md:pt-8 sm:pt-10 px-4 sm:px-6 flex flex-col items-start md:items-center gap-3 text-center font-bricolage">
 
         {/* Heading */}
         <h1 className="text-h2 mt-2 md:text-h1 text-left md:text-center font-[500] leading-tight tracking-tight max-w-[100%] lg:max-w-4xl">
@@ -35,7 +35,7 @@ function Hero() {
           mt-4 sm:mt-6
         "
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={<div className="w-full h-full bg-gradient-to-b from-[#F7F3CD]/40 to-[#F7F3CD] animate-pulse" />}>
           <CircularGallery
             bend={3}
             textColor="#ffffff"
@@ -47,6 +47,6 @@ function Hero() {
 
     </div>
   );
-}
+});
 
-export default memo(Hero);
+export default Hero;

@@ -6,9 +6,12 @@ import { Outlet } from 'react-router-dom'
 
 function Layout() {
     return (
-        <div>
+        <div className="w-full">
             <Header />
-            <Outlet />
+            {/* Main content with proper spacing for fixed header */}
+            <main className="pt-[80px] w-full">
+                <Outlet />
+            </main>
             <Footer />
         </div>
     )
