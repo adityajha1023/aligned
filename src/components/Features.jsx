@@ -28,7 +28,7 @@ export default function Services() {
   };
 
   return (
-    <section className="w-full h-[80vh] flex justify-center items-center font-bricolage">
+    <section id="services" className="w-full h-[80vh] flex justify-center items-center font-bricolage">
       <div className="mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-80 px-16 py-20">
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-3 z-10 w-full lg:w-auto">

@@ -31,7 +31,7 @@ const Header = memo(function Header() {
           <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="/">Home</a>
           <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#about">About</a>
           <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#services">Services</a>
-          <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#projects">Projects</a>
+          <a className="relative block rounded-full text-paragraph text-[#606060] hover:text-black hover:scale-105 duration-300 transition" href="#work">Work</a>
 
           {/* Contact Button */}
           <a href="#contact" className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
