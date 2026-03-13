@@ -28,36 +28,65 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="w-full h-[80vh] flex justify-center items-center font-bricolage">
-      <div className="mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-80 px-16 py-20">
+    <section
+      id="services"
+      className="
+        w-full
+        min-h-[90vh] lg:min-h-screen
+        flex items-center justify-center
+        font-bricolage
+        px-4 sm:px-6 lg:px-12
+      "
+    >
+      <div
+        className="
+          max-w-7xl
+          w-full
+          flex flex-col lg:flex-row
+          items-center
+          gap-12 lg:gap-24
+          py-16 lg:py-24
+        "
+      >
         {/* LEFT CONTENT */}
-        <div className="flex flex-col gap-3 z-10 w-full lg:w-auto">
-          <span className="border-2 border-[#A8A8A8] px-3 py-1 rounded-full w-fit text-sm">Services</span>
-          <h1 className="text-h3 md:text-h2 font-[500] leading-tight tracking-tight">
+        <div className="flex flex-col gap-4 w-full lg:max-w-xl">
+
+          <span className="border border-[#A8A8A8] px-3 py-1 rounded-full w-fit text-sm">
+            Services
+          </span>
+
+          <h1 className="text-h4 md:text-h3 lg:text-h2 font-[500] leading-tight tracking-tight">
             How can we help you?
           </h1>
 
           {/* SERVICES LIST */}
-          <div className="mt-6 lg:mt-8 flex flex-col gap-4 sm:gap-6 lg:ml-12">
+          <div className="mt-6 flex flex-col gap-4 sm:gap-5">
+
             {services.map((s) => (
               <div
                 key={s.id}
                 onMouseEnter={() => setActive(s.id)}
+                onTouchStart={() => setActive(s.id)}
                 onClick={() => setActive(s.id)}
-                className="cursor-pointer flex items-center gap-4 sm:gap-6 transition-all font-normal">
+                className="cursor-pointer flex items-center gap-4 transition-all"
+              >
                 <span
-                  className={`text-h5 md:text-h4 transition-all ${
-                    active === s.id ? "text-black font-medium" : "text-black/30 font-normal" 
-                  }`}>
+                  className={`text-h6 md:text-h5 lg:text-h4 transition-all ${
+                    active === s.id
+                      ? "text-black font-medium"
+                      : "text-black/30"
+                  }`}
+                >
                   {`0${s.id}`}
                 </span>
 
                 <h2
-                  className={`text-h5 md:text-h4 tracking-tight transition-all duration-300 ${
+                  className={`text-h6 md:text-h5 lg:text-h4 tracking-tight transition-all duration-300 ${
                     active === s.id
                       ? "text-black font-medium"
-                      : "text-black/30 font-normal"
-                  }`}>
+                      : "text-black/30"
+                  }`}
+                >
                   {s.title}
                 </h2>
               </div>
@@ -66,14 +95,27 @@ export default function Services() {
         </div>
 
         {/* RIGHT IMAGE STACK */}
-        <div className="relative w-full max-w-[420px] sm:mt-40 mt-0 sm:max-w-[480px] lg:w-[520px] h-[320px] sm:h-[360px] lg:h-[420px] flex items-center justify-center ">
+        <div
+          className="
+            relative
+            w-full
+            max-w-[340px]
+            sm:max-w-[420px]
+            lg:max-w-[520px]
+            h-[280px]
+            sm:h-[320px]
+            lg:h-[420px]
+            flex items-center justify-center
+          "
+        >
           {services.map((s) => {
             const position = getPosition(s.id);
 
             if (Math.abs(position) > 1) return null;
 
             const base =
-              "absolute w-[200px] sm:w-[220px] lg:w-[260px] h-[260px] sm:h-[300px] lg:h-[320px] object-cover rounded-xl transition-all duration-500 ease-out border border-[#ccc] rounded-2xl";
+              "absolute w-[160px] sm:w-[200px] lg:w-[260px] h-[220px] sm:h-[260px] lg:h-[320px] object-cover rounded-2xl transition-all duration-500 ease-out border border-[#ccc]";
+
             let transform = "";
             let z = "";
             let opacity = "";
@@ -81,7 +123,7 @@ export default function Services() {
 
             if (position === -1) {
               transform =
-                "-translate-x-20 sm:-translate-x-28 lg:-translate-x-32 -translate-y-6 sm:-translate-y-8 scale-90";
+                "-translate-x-16 sm:-translate-x-24 lg:-translate-x-32 -translate-y-4 sm:-translate-y-6 scale-90";
               z = "z-10";
               opacity = "opacity-40";
               shadow = "shadow-md";
@@ -92,9 +134,9 @@ export default function Services() {
               shadow = "shadow-2xl";
             } else if (position === 1) {
               transform =
-                "translate-x-20 sm:translate-x-28 lg:translate-x-32 translate-y-6 sm:translate-y-8 scale-90";
+                "translate-x-16 sm:translate-x-24 lg:translate-x-32 translate-y-4 sm:translate-y-6 scale-90";
               z = "z-20";
-              opacity = "opacity-30";
+              opacity = "opacity-40";
               shadow = "shadow-md";
             }
 

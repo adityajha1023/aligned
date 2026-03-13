@@ -4,40 +4,135 @@ function Contact() {
   const [service, setService] = useState("");
 
   return (
-    <section id="contact" className="flex justify-center items-center min-h-[90vh] md:mt-0 px-4">
-      <div className="flex flex-col lg:flex-row justify-center gap-16 lg:gap-72 items-start lg:items-center w-full max-w-[1400px] font-bricolage">
-
+    <section
+      id="contact"
+      className="
+        flex justify-center items-center
+        min-h-[90vh]
+        px-4 sm:px-6 lg:px-12
+      "
+    >
+      <div
+        className="
+          flex flex-col lg:flex-row
+          justify-between
+          items-start lg:items-center
+          gap-12 lg:gap-20
+          w-full
+          max-w-7xl
+          font-bricolage
+        "
+      >
         {/* Left: Form */}
         <div className="w-full lg:w-1/2">
-          <h2 className="text-h3 md:text-h2 font-medium">Have questions?</h2>
-          <span className="text-h4 md:text-h3 font-medium block mt-2">
+
+          <h2 className="text-h4 md:text-h3 lg:text-h2 font-medium">
+            Have questions?
+          </h2>
+
+          <span className="text-h5 md:text-h4 lg:text-h3 font-medium block mt-2">
             We're listening
           </span>
 
-          <form className="flex flex-col mt-8">
-            <input required type="text" placeholder="Your Name" className="outline-none placeholder:text-[#000] bg-transparent border-b-2 border-[#A8A8A8] w-full max-w-[25rem] py-4 px-1 opacity-70 text-paragraph"/>
-            <input required type="email" placeholder="Your Email" className="outline-none placeholder:text-[#000] bg-transparent border-b-2 border-[#A8A8A8] w-full max-w-[25rem] mt-8 py-4 px-1 opacity-70 text-paragraph"/>
+          <form className="flex flex-col space-y-6 mt-8 max-w-md">
+
+            <input
+              required
+              type="text"
+              placeholder="Your Name"
+              className="
+                outline-none
+                placeholder:text-black
+                bg-transparent
+                border-b-2 border-[#A8A8A8]
+                py-3
+                opacity-70
+                text-paragraph
+              "
+            />
+
+            <input
+              required
+              type="email"
+              placeholder="Your Email"
+              className="
+                outline-none
+                placeholder:text-black
+                bg-transparent
+                border-b-2 border-[#A8A8A8]
+                py-3
+                opacity-70
+                text-paragraph
+              "
+            />
+
             <select
               required
               value={service}
               onChange={(e) => setService(e.target.value)}
-              className="outline-none bg-transparent border-b-2 border-[#A8A8A8] w-full max-w-[25rem] mt-8 py-4 opacity-70 text-paragraph">
+              className="
+                outline-none
+                bg-transparent
+                border-b-2 border-[#A8A8A8]
+                py-3
+                opacity-70
+                text-paragraph
+              "
+            >
               <option value="">Select Service</option>
-              <option value="Creative Visualisation">Creative Visualisation</option>
+              <option value="Creative Visualisation">
+                Creative Visualisation
+              </option>
               <option value="Personal Branding">Personal Branding</option>
-              <option value="Social Media Marketing">Social Media Marketing</option>
-              <option value="Packaging & Branding">Packaging & Branding</option>
+              <option value="Social Media Marketing">
+                Social Media Marketing
+              </option>
+              <option value="Packaging & Branding">
+                Packaging & Branding
+              </option>
               <option value="Growth Marketing">Growth Marketing</option>
             </select>
 
-            <button type="submit" className="mt-10 w-full max-w-[25rem] bg-black rounded-full py-3 text-white text-paragraph font-medium shadow-md hover:scale-105 transition-transform duration-200"> 
-                Start the Conversation
+            <button
+              type="submit"
+              className="
+                mt-4
+                bg-black
+                rounded-full
+                py-3
+                text-white
+                text-paragraph
+                font-medium
+                shadow-md
+                hover:scale-105
+                transition-transform
+                duration-200
+              "
+            >
+              Start the Conversation
             </button>
+
           </form>
         </div>
 
         {/* Right: Gradient Card */}
-        <div className=" w-full lg:w-[22vw] h-[60vh] p-6 flex justify-end items-end text-right font-medium text-h6 bg-gradient-to-b from-white to-[#D0E8F6] rounded-xl  ">
+        <div
+          className="
+            w-full
+            lg:w-[360px]
+            min-h-[220px]
+            lg:min-h-[420px]
+            p-6 sm:p-8
+            flex justify-end items-end
+            text-right
+            font-medium
+            text-h6
+            bg-gradient-to-b
+            from-white
+            to-[#D0E8F6]
+            rounded-xl
+          "
+        >
           <h3>
             Make your brand <br />
             ALN'D. <br />

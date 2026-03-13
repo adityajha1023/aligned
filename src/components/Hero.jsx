@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, memo } from "react";
 import heroImg from "../assets/hero_image.webp";
 
-/* Lazy load heavy gallery */
 const CircularGallery = lazy(() => import("./CircularGallery"));
 
 const Hero = memo(function Hero() {
@@ -9,33 +8,70 @@ const Hero = memo(function Hero() {
     <div className="w-full">
 
       {/* Hero Content */}
-      <div className="pt-10 md:pt-8 sm:pt-10 px-4 sm:px-6 flex flex-col items-start md:items-center gap-3 text-center font-bricolage">
+      <div className="pt-12 md:pt-16 lg:pt-20 px-4 sm:px-6 flex flex-col items-start md:items-center gap-4 md:gap-5 lg:gap-6 text-left md:text-center font-bricolage">
 
         {/* Heading */}
-        <h1 className="text-h2 mt-2 md:text-h1 text-left md:text-center font-[500] leading-tight tracking-tight max-w-[100%] lg:max-w-4xl">
-          We Build B2B Brands <br /> & The Leaders Behind Them.
+        <h1 className="
+          text-h3 
+          md:text-h2 
+          lg:text-h1
+          font-[500]
+          leading-tight
+          tracking-tight
+          max-w-full
+          lg:max-w-4xl
+        ">
+          We Build B2B Brands <br />
+          & The Leaders Behind Them.
         </h1>
+
         {/* Paragraph */}
-        <p className="opacity-70 tracking-normal text-paragraph mt-2 w-[40%]">Strategic positioning and identity systems, built in partnership with founders and executive teams.</p>
+        <p className="
+          text-paragraph
+          opacity-70
+          max-w-md
+          md:max-w-lg
+          lg:max-w-xl
+        ">
+          Strategic positioning and identity systems, built in partnership with founders and executive teams.
+        </p>
+
         {/* CTA */}
-        <a href="/#contact" className="bg-black rounded-full mt-4 px-5 sm:px-6 py-2.5 sm:py-3 text-white text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200">
+        <a
+          href="/#contact"
+          className="
+            bg-black
+            text-white
+            text-paragraph
+            font-[500]
+            rounded-full
+            px-6
+            py-3
+            shadow-md
+            hover:scale-105
+            transition-transform
+            duration-200
+          "
+        >
           Get in Touch
         </a>
 
       </div>
 
-      {/* Circular Gallery (lazy loaded) */}
-      <div
-        className="
-          relative w-full
-          h-[420px]
-          sm:h-[420px]
-          md:h-[500px]
-          lg:h-[600px]
-          mt-4 sm:mt-6
-        "
-      >
-        <Suspense fallback={<div className="w-full h-full bg-gradient-to-b from-[#F7F3CD]/40 to-[#F7F3CD] animate-pulse" />}>
+      {/* Circular Gallery */}
+      <div className="
+        relative w-full
+        h-[380px]
+        sm:h-[420px]
+        md:h-[520px]
+        lg:h-[640px]
+        mt-6
+      ">
+        <Suspense
+          fallback={
+            <div className="w-full h-full bg-gradient-to-b from-[#F7F3CD]/40 to-[#F7F3CD] animate-pulse" />
+          }
+        >
           <CircularGallery
             bend={3}
             textColor="#ffffff"
