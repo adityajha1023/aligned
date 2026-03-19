@@ -35,7 +35,7 @@ function Cta() {
         <div className="relative z-10 max-w-md md:max-w-xl lg:max-w-2xl">
 
           {/* Heading */}
-          <h1 className="text-h4 md:text-h3 lg:text-h2 font-semibold leading-tight tracking-tight text-black mb-6">
+          <h1 className="text-h4 md:text-h3 lg:text-h2 font-medium leading-tight tracking-tight text-black mb-6">
             Strong brands are built through <br />
             structure — not just marketing.
           </h1>
