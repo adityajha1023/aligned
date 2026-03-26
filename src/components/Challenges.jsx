@@ -55,7 +55,7 @@ export default function Challenges() {
       "
     >
       {/* Heading */}
-      <h1 className="text-5 md:text-h3 lg:text-h3 font-medium text-center max-w-3xl text-[#145DA1]">
+      <h1 className="text-h4 md:text-h3 lg:text-h3 font-medium text-center max-w-3xl text-[#145DA1]">
         Key brand challenges at each stage of growth
       </h1>
 

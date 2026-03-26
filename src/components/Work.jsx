@@ -41,7 +41,7 @@ function Work() {
         </h1>
 
         <p className="text-paragraph text-neutral-700 mt-2">
-          A selection of brands we've brought into alignment
+          A selection of brands we've brought into <span className="text-[#145DA1] font-bold">ALIGNMENT</span>
         </p>
 
       </div>

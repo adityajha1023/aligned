@@ -14,7 +14,7 @@ const Header = memo(function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-lg border-b border-[#a8a8a8] font-bricolage">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#F7F3CD]/70 backdrop-blur-lg border-b border-[#a8a8a8] font-bricolage">
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-32">
         {/* Logo */}
@@ -50,7 +50,7 @@ const Header = memo(function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden absolute rounded-b-[50px] top-[80px] left-0 w-full bg-white backdrop-blur-lg border-b border-[#ccc] transition-all duration-300 overflow-hidden
+        className={`md:hidden absolute rounded-b-[50px] top-[80px] left-0 w-full bg-[#F7F3CD] backdrop-blur-lg border-b border-[#ccc] transition-all duration-300 overflow-hidden
         ${isOpen ? "max-h-[400px] opacity-100" : "max-h-0 opacity-0"}`}>
         <ul className="flex flex-col items-center gap-6 py-8">
           {["Home", "About", "Services", "Projects"].map((item) => (

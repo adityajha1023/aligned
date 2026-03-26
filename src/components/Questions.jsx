@@ -48,7 +48,7 @@ export default function Questions() {
             className="relative px-[1.5px] py-[1.5px] list-none rounded-full cursor-pointer"
           >
             <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#1F2455]" />
-            <h3 className="relative block px-5 sm:px-6 py-2.5 sm:py-3 bg-[#F7F3CD] rounded-full text-paragraph font-medium text-center">
+            <h3 className="relative block px-5 sm:px-6 py-0.5 sm:py-3 bg-[#F7F3CD] rounded-full text-paragraph font-medium text-center">
               {q}
             </h3>
           </li>

@@ -8,7 +8,7 @@ function Contact() {
       id="contact"
       className="
         flex justify-center items-center
-        min-h-[90vh]
+        h-[100vh]
         px-4 sm:px-6 lg:px-12
       "
     >
@@ -81,15 +81,15 @@ function Contact() {
               "
             >
               <option value="">Book You Free Audit</option>
-              <option value="Creative Visualisation">
-                Creative Visualisation
+              <option value="Brand & Positioning">
+                Brand & Positioning 
               </option>
-              <option value="Personal Branding">Personal Branding</option>
-              <option value="Social Media Marketing">
-                Social Media Marketing
+              <option value="Business & Communication Assets">Business & Communication Assets</option>
+              <option value="Content & Authority">
+                Content & Authority
               </option>
-              <option value="Packaging & Branding">
-                Packaging & Branding
+              <option value="Growth & Distribution">
+                Growth & Distribution
               </option>
               <option value="Growth Marketing">Growth Marketing</option>
             </select>
@@ -108,6 +108,8 @@ function Contact() {
                 hover:scale-105
                 transition-transform
                 duration-200
+                hover:bg-[#145DA1]
+                hover:text-[#F7F3CD]
               "
             >
               Start the Conversation
