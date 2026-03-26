@@ -12,11 +12,11 @@ import Work8 from "../assets/sample8.webp";
 function Work() {
 
   const works = [
-    { img: Work3, h: "h-[200px] sm:h-[240px] lg:h-[270px]" },
-    { img: Work4, h: "h-[240px] sm:h-[300px] lg:h-[350px]" },
-    { img: Work6, h: "h-[200px] sm:h-[240px] lg:h-[270px]" },
-    { img: Work7, h: "h-[240px] sm:h-[300px] lg:h-[350px]" },
-    { img: Work8, h: "h-[220px] sm:h-[260px] lg:h-[300px]" },
+    { img: Work3, h: "h-[240px] lg:h-[270px]" },
+    { img: Work4, h: "h-[300px] lg:h-[350px]" },
+    { img: Work6, h: "h-[240px] lg:h-[270px]" },
+    { img: Work7, h: "h-[300px] lg:h-[350px]" },
+    { img: Work8, h: "h-[260px] lg:h-[300px]" },
   ];
 
   return (

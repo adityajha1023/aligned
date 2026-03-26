@@ -97,7 +97,7 @@ function About() {
               <React.Fragment key={index}>
                 <br />
                 <span
-                  className="text-paragraph md:text-h6 lg:text-h5"
+                  className="text-h6 md:text-h6 lg:text-h5"
                   style={{
                     ...colorStyle,
                     opacity: wordOpacities[index],
