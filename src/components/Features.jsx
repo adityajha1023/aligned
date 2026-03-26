@@ -1,18 +1,19 @@
 import React, { useState } from "react";
-import feature1 from "../assets/sample1.webp";
-import feature2 from "../assets/sample2.webp";
-import feature3 from "../assets/sample3.webp";
-import feature4 from "../assets/sample4.webp";
+import feature1 from "../assets/feature1.webp";
+import feature2 from "../assets/feature2.webp";
+import feature3 from "../assets/feature3.webp";
+import feature4 from "../assets/feature4.webp";
+import feature5 from "../assets/feature5.webp";
 
 export default function Services() {
   const [active, setActive] = useState(3);
 
   const services = [
     { id: 1, title: "Brand & Positioning", img: feature1 },
-    { id: 2, title: "Business & Communication Assets", img: feature3 },
-    { id: 3, title: "Content & Authority", img: feature2 },
+    { id: 2, title: "Business & Communication Assets", img: feature2 },
+    { id: 3, title: "Content & Authority", img: feature5 },
     { id: 4, title: "Growth & Distribution", img: feature4 },
-    { id: 5, title: "Growth Marketing", img: feature2 },
+    { id: 5, title: "Growth Marketing", img: feature3 },
   ];
 
   const getPosition = (serviceId) => {
@@ -77,7 +78,7 @@ export default function Services() {
                 </span>
 
                 <h2
-                  className={`text-h6 md:text-h5 lg:text-h4 tracking-tight transition-all duration-300 ${
+                  className={`text-h5 md:text-h5 lg:text-h4 tracking-tight transition-all duration-300 ${
                     active === s.id
                       ? "text-[#145DA1] font-medium"
                       : "text-[#145DA1]/30"
@@ -110,7 +111,7 @@ export default function Services() {
             if (Math.abs(position) > 1) return null;
 
             const base =
-              "absolute w-[160px] sm:w-[200px] lg:w-[260px] h-[220px] sm:h-[260px] lg:h-[320px] object-cover rounded-2xl transition-all duration-500 ease-out border border-[#ccc]";
+              "absolute w-[200px] sm:w-[200px] lg:w-[260px] h-[260px] sm:h-[260px] lg:h-[320px] object-cover rounded-2xl transition-all duration-500 ease-out border border-[#ccc]";
 
             let transform = "";
             let z = "";

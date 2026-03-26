@@ -1,18 +1,22 @@
 import React from "react";
-import Work1 from "../assets/feature1.webp";
-import Work2 from "../assets/feature2.webp";
-import Work3 from "../assets/feature3.webp";
-import Work4 from "../assets/feature4.webp";
-import Work5 from "../assets/feature5.webp";
+import Work1 from "../assets/sample1.webp";
+import Work2 from "../assets/sample2.webp";
+import Work3 from "../assets/sample3.webp";
+import Work4 from "../assets/sample4.webp";
+import Work5 from "../assets/sample5.webp";
+import Work6 from "../assets/sample6.webp";
+import Work7 from "../assets/sample7.webp";
+import Work8 from "../assets/sample8.webp";
+
 
 function Work() {
 
   const works = [
-    { img: Work1, h: "h-[220px] sm:h-[260px] lg:h-[300px]" },
-    { img: Work2, h: "h-[240px] sm:h-[300px] lg:h-[350px]" },
     { img: Work3, h: "h-[200px] sm:h-[240px] lg:h-[270px]" },
     { img: Work4, h: "h-[240px] sm:h-[300px] lg:h-[350px]" },
-    { img: Work5, h: "h-[220px] sm:h-[260px] lg:h-[300px]" }
+    { img: Work6, h: "h-[200px] sm:h-[240px] lg:h-[270px]" },
+    { img: Work7, h: "h-[240px] sm:h-[300px] lg:h-[350px]" },
+    { img: Work8, h: "h-[220px] sm:h-[260px] lg:h-[300px]" },
   ];
 
   return (

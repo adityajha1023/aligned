@@ -1,10 +1,17 @@
 import React, { memo, useState, useEffect } from "react";
+import footer1 from "../assets/footer1.webp";
+import footer2 from "../assets/footer2.webp";
+import footer3 from "../assets/footer3.webp";
+import footer4 from "../assets/footer4.webp";
+import footer5 from "../assets/footer5.webp";
+
 
 const images = [
-  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop",
-  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop",
-  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop",
-  "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop",
+  footer1,
+  footer2,
+  footer3,
+  footer4,
+  footer5
 ];
 
 const ImageSlideshow = () => {

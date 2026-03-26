@@ -2,11 +2,12 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import img1 from "../assets/feature1.webp";
-import img2 from "../assets/feature2.webp";
-import img3 from "../assets/feature3.webp";
-import img4 from "../assets/feature4.webp";
-import img5 from "../assets/feature5.webp";
+import img1 from "../assets/sample1.webp";
+import img2 from "../assets/sample2.webp";
+import img3 from "../assets/sample3.webp";
+import img4 from "../assets/sample4.webp";
+import img5 from "../assets/sample5.webp";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,76 +23,94 @@ export default function HorizontalInfiniteBentGallery() {
 
     if (!wrapper || !track) return;
 
-    wrapper.style.overflowX = "hidden";
-
     let isMobile = window.innerWidth < 768;
     let viewportCenter = window.innerWidth / 2;
     let totalWidth = track.scrollWidth / 2;
+    let wrapX = gsap.utils.wrap(-totalWidth, 0);
 
-    const ctx = gsap.context(() => {
-      gsap.set(track, { x: 0 });
+    // ✅ Cache offsetLeft + offsetWidth once — never read inside the animation loop
+    let cachedOffsets = items.map((item) => ({
+      left: item.offsetLeft,
+      halfWidth: item.offsetWidth / 2,
+    }));
 
-      const tween = gsap.to(track, {
-        x: -totalWidth,
-        ease: "none",
-        scrollTrigger: {
-          trigger: wrapper,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 1,
-        },
-        modifiers: {
-          x: (x) => `${parseFloat(x) % totalWidth}px`,
-        },
-        onUpdate: bendItems,
+    let currentX = 0;
+    let rafId = null;
+
+    function applyBend(x) {
+      const radius = isMobile ? 600 : 1400;
+      const rotMul = isMobile ? 0.6 : 1;
+
+      // ✅ All reads first, then all writes — no interleaving
+      const transforms = cachedOffsets.map(({ left, halfWidth }) => {
+        const itemCenter = left + halfWidth + x;
+        const distance = itemCenter - viewportCenter;
+        const angle = distance / radius;
+        const y = radius * (1 - Math.cos(angle));
+        const rotation = angle * (180 / Math.PI) * rotMul;
+        return { y, rotation };
       });
 
-      function bendItems() {
-        const radius = isMobile ? 600 : 1400;
-        const rotationMultiplier = isMobile ? 0.6 : 1;
+      // ✅ Write directly to style.transform — bypass GSAP overhead entirely
+      items.forEach((item, i) => {
+        if (!item) return;
+        const { y, rotation } = transforms[i];
+        item.style.transform = `translateY(${y}px) rotate(${rotation}deg)`;
+        item.style.transformOrigin = "center center";
+      });
+    }
 
-        items.forEach((item) => {
-          if (!item) return;
+    function onTick() {
+      const wrappedX = wrapX(currentX);
+      // ✅ Write track position directly too
+      track.style.transform = `translateX(${wrappedX}px)`;
+      applyBend(wrappedX);
+      rafId = null;
+    }
 
-          // 🔥 NO getBoundingClientRect
-          const itemCenter =
-            item.offsetLeft +
-            item.offsetWidth / 2 +
-            gsap.getProperty(track, "x");
+    gsap.set(track, { x: 0 });
 
-          const distance = itemCenter - viewportCenter;
-          const angle = distance / radius;
+    const st = ScrollTrigger.create({
+      trigger: wrapper,
+      start: "top bottom",
+      end: "bottom top",
+      scrub: 1,
+      onUpdate: (self) => {
+        // Map scroll progress [0,1] → [0, -totalWidth]
+        currentX = -self.progress * totalWidth;
 
-          const y = radius * (1 - Math.cos(angle));
-          const rotation =
-            angle * (180 / Math.PI) * rotationMultiplier;
+        // ✅ Debounce via rAF — never run more than once per frame
+        if (!rafId) {
+          rafId = requestAnimationFrame(onTick);
+        }
+      },
+    });
 
-          gsap.set(item, {
-            y,
-            rotation,
-            transformOrigin: "center center",
-          });
-        });
-      }
+    applyBend(0);
 
-      bendItems();
+    const handleResize = () => {
+      isMobile = window.innerWidth < 768;
+      viewportCenter = window.innerWidth / 2;
+      totalWidth = track.scrollWidth / 2;
+      wrapX = gsap.utils.wrap(-totalWidth, 0);
 
-      const handleResize = () => {
-        isMobile = window.innerWidth < 768;
-        viewportCenter = window.innerWidth / 2;
-        totalWidth = track.scrollWidth / 2;
-        tween.invalidate().restart();
-        bendItems();
-      };
+      // Recache offsets after layout settles
+      cachedOffsets = items.map((item) => ({
+        left: item.offsetLeft,
+        halfWidth: item.offsetWidth / 2,
+      }));
 
-      window.addEventListener("resize", handleResize);
+      st.refresh();
+      applyBend(currentX);
+    };
 
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }, wrapper);
+    window.addEventListener("resize", handleResize);
 
-    return () => ctx.revert();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (rafId) cancelAnimationFrame(rafId);
+      st.kill();
+    };
   }, []);
 
   const images = [
@@ -108,6 +127,7 @@ export default function HorizontalInfiniteBentGallery() {
         <div
           ref={trackRef}
           className="flex gap-6 sm:gap-10 md:gap-16 will-change-transform"
+          style={{ willChange: "transform" }}
         >
           {images.map((img, i) => (
             <div
@@ -120,6 +140,7 @@ export default function HorizontalInfiniteBentGallery() {
                 md:w-[250px] md:h-[350px]
                 border border-[#ccc] rounded-2xl
               "
+              style={{ willChange: "transform" }}
             >
               <img
                 src={img}

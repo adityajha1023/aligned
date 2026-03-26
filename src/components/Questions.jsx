@@ -6,13 +6,13 @@ export default function Questions() {
     <section
       className="
         w-full
-        min-h-[90vh] lg:min-h-screen
+        min-h-[90vh] h-[100vh]
         flex flex-col
         justify-center
         items-start
         px-4 sm:px-6 lg:px-28
         font-bricolage
-        mt-16
+        my-20
         relative
       "
     >

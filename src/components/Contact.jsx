@@ -78,6 +78,7 @@ function Contact() {
                 opacity-70
                 text-paragraph
                 text-[#145DA1]
+                font-medium
               "
             >
               <option value="">Book You Free Audit</option>
