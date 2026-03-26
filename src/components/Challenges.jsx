@@ -55,7 +55,7 @@ export default function Challenges() {
       "
     >
       {/* Heading */}
-      <h1 className="text-5 md:text-h3 lg:text-h3 font-medium text-center max-w-3xl">
+      <h1 className="text-5 md:text-h3 lg:text-h3 font-medium text-center max-w-3xl text-[#145DA1]">
         Key brand challenges at each stage of growth
       </h1>
 
@@ -75,7 +75,8 @@ export default function Challenges() {
           <div
             key={i}
             className="
-              bg-[#f8f9fa]/60
+              bg-[#145DA1]
+              text-[#F7F3CD]
               rounded-3xl
               p-8
               flex flex-col
@@ -92,7 +93,7 @@ export default function Challenges() {
               {card.title}
             </h2>
 
-            <ul className="text-neutral-700 space-y-1.5 text-sm md:text-paragraph">
+            <ul className="list-disc text-[#F3F7CD] space-y-1.5 text-sm md:text-paragraph">
               {card.items.map((item, j) => (
                 <li key={j}>{item}</li>
               ))}

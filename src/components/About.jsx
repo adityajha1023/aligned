@@ -2,9 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 
 function About() {
   const textContent =
-    "Strong brands are shaped from the top down. Most agencies focus on visibility. We align company positioning with executive presence - as one system.";
+    "Strong brands are shaped from the top down. We ALIGN company positioning with executive presence - as one system.";
 
   const words = textContent.split(" ");
+
+  const breakIndex = words.findIndex(
+    (word) => word.includes("down.")
+  ) + 1;
 
   const [wordOpacities, setWordOpacities] = useState(
     Array(words.length).fill(0.3)
@@ -55,7 +59,7 @@ function About() {
       ref={sectionRef}
       id="about"
       className="
-        min-h-[80vh] md:min-h-screen
+        min-h-[70vh]
         px-4 sm:px-6
         flex flex-col
         items-center
@@ -79,17 +83,51 @@ function About() {
           text-balance
         "
       >
-        {words.map((word, index) => (
-          <span
-            key={index}
-            style={{
-              opacity: wordOpacities[index],
-              transition: "opacity 0.3s ease-out",
-            }}
-          >
-            {word}{" "}
-          </span>
-        ))}
+        {words.map((word, index) => {
+          const isFirstSentence = index < breakIndex;
+          const isAlignWord = word === "ALIGN";
+
+          const colorStyle =
+            isFirstSentence || isAlignWord
+              ? { color: "#145DA1" }
+              : {};
+
+          if (index === breakIndex) {
+            return (
+              <React.Fragment key={index}>
+                <br />
+                <span
+                  className="text-paragraph md:text-h6 lg:text-h5"
+                  style={{
+                    ...colorStyle,
+                    opacity: wordOpacities[index],
+                    transition: "opacity 0.3s ease-out",
+                  }}
+                >
+                  {word}{" "}
+                </span>
+              </React.Fragment>
+            );
+          }
+
+          return (
+            <span
+              key={index}
+              className={
+                index >= breakIndex
+                  ? "text-paragraph md:text-h6 lg:text-h5"
+                  : ""
+              }
+              style={{
+                ...colorStyle,
+                opacity: wordOpacities[index],
+                transition: "opacity 0.3s ease-out",
+              }}
+            >
+              {word}{" "}
+            </span>
+          );
+        })}
       </h2>
     </section>
   );

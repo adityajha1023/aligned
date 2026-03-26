@@ -26,7 +26,7 @@ function Contact() {
         {/* Left: Form */}
         <div className="w-full lg:w-1/2">
 
-          <h2 className="text-h4 md:text-h3 lg:text-h2 font-medium">
+          <h2 className="text-h4 md:text-h3 lg:text-h2 font-medium text-[#145DA1]">
             Have questions?
           </h2>
 
@@ -39,12 +39,12 @@ function Contact() {
             <input
               required
               type="text"
-              placeholder="Your Name"
+              placeholder="Drop Your Name"
               className="
                 outline-none
-                placeholder:text-black
+                placeholder:text-[#145DA1]
                 bg-transparent
-                border-b-2 border-[#A8A8A8]
+                border-b-2 border-[#145DA1]
                 py-3
                 opacity-70
                 text-paragraph
@@ -54,12 +54,12 @@ function Contact() {
             <input
               required
               type="email"
-              placeholder="Your Email"
+              placeholder="Drop Your Email"
               className="
                 outline-none
-                placeholder:text-black
+                placeholder:text-[#145DA1]
                 bg-transparent
-                border-b-2 border-[#A8A8A8]
+                border-b-2 border-[#145DA1]
                 py-3
                 opacity-70
                 text-paragraph
@@ -73,13 +73,14 @@ function Contact() {
               className="
                 outline-none
                 bg-transparent
-                border-b-2 border-[#A8A8A8]
+                border-b-2 border-[#145DA1]
                 py-3
                 opacity-70
                 text-paragraph
+                text-[#145DA1]
               "
             >
-              <option value="">Select Service</option>
+              <option value="">Book You Free Audit</option>
               <option value="Creative Visualisation">
                 Creative Visualisation
               </option>
@@ -97,10 +98,10 @@ function Contact() {
               type="submit"
               className="
                 mt-4
-                bg-black
+                border-2 border-[#145DA1]
                 rounded-full
                 py-3
-                text-white
+                text-[#145DA1]
                 text-paragraph
                 font-medium
                 shadow-md

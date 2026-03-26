@@ -8,10 +8,10 @@ export default function Services() {
   const [active, setActive] = useState(3);
 
   const services = [
-    { id: 1, title: "Creative Visualisation", img: feature1 },
-    { id: 2, title: "Personal Branding", img: feature3 },
-    { id: 3, title: "Social Media Marketing", img: feature2 },
-    { id: 4, title: "Packaging & Branding", img: feature4 },
+    { id: 1, title: "Brand & Positioning", img: feature1 },
+    { id: 2, title: "Business & Communication Assets", img: feature3 },
+    { id: 3, title: "Content & Authority", img: feature2 },
+    { id: 4, title: "Growth & Distribution", img: feature4 },
     { id: 5, title: "Growth Marketing", img: feature2 },
   ];
 
@@ -35,7 +35,7 @@ export default function Services() {
         min-h-[90vh] lg:min-h-screen
         flex items-center justify-center
         font-bricolage
-        px-4 sm:px-6 lg:px-12
+        px-4 sm:px-6 lg:px-12 text-[#145DA1]
       "
     >
       <div
@@ -51,12 +51,8 @@ export default function Services() {
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-4 w-full lg:max-w-xl">
 
-          <span className="border border-[#A8A8A8] px-3 py-1 rounded-full w-fit text-sm">
-            Services
-          </span>
-
           <h1 className="text-h4 md:text-h3 lg:text-h2 font-[500] leading-tight tracking-tight">
-            How can we help you?
+            How we align your brand for growth
           </h1>
 
           {/* SERVICES LIST */}
@@ -73,8 +69,8 @@ export default function Services() {
                 <span
                   className={`text-h6 md:text-h5 lg:text-h4 transition-all ${
                     active === s.id
-                      ? "text-black font-medium"
-                      : "text-black/30"
+                      ? "text-[#145DA1] font-medium"
+                      : "text-[#145DA1]/30"
                   }`}
                 >
                   {`0${s.id}`}
@@ -83,8 +79,8 @@ export default function Services() {
                 <h2
                   className={`text-h6 md:text-h5 lg:text-h4 tracking-tight transition-all duration-300 ${
                     active === s.id
-                      ? "text-black font-medium"
-                      : "text-black/30"
+                      ? "text-[#145DA1] font-medium"
+                      : "text-[#145DA1]/30"
                   }`}
                 >
                   {s.title}

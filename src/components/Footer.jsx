@@ -38,7 +38,7 @@ const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="font-bricolage py-12 px-4 sm:px-6 lg:px-16">
+    <footer className="font-bricolage py-12 px-4 sm:px-6 lg:px-16 text-[#145DA1]">
       <div className="max-w-7xl mx-auto">
 
         {/* Top Navigation */}
@@ -47,10 +47,10 @@ const Footer = memo(function Footer() {
           {/* Menu */}
           <div className="flex flex-col gap-1">
             <h4 className="text-h6 font-[500] py-2">Menu</h4>
-            <a href="#" className="text-paragraph text-[#606060] hover:text-black transition">
+            <a href="#" className="text-paragrap text-[#145DA1] transition">
               Work
             </a>
-            <a href="#" className="text-paragraph text-[#606060] hover:text-black transition">
+            <a href="#" className="text-paragrap text-[#145DA1] transition">
               Contact
             </a>
           </div>
@@ -58,10 +58,10 @@ const Footer = memo(function Footer() {
           {/* Socials */}
           <div className="flex flex-col gap-1 sm:text-right">
             <h4 className="text-h6 font-[500] py-2">Socials</h4>
-            <a href="#" className="text-paragraph text-[#606060] hover:text-black transition">
+            <a href="#" className="text-paragraph text-[#145DA1] transition">
               Instagram
             </a>
-            <a href="#" className="text-paragraph text-[#606060] hover:text-black transition">
+            <a href="#" className="text-paragraph text-[#145DA1] transition">
               Email
             </a>
           </div>
@@ -71,9 +71,9 @@ const Footer = memo(function Footer() {
         {/* Brand Statement */}
         <div className="flex justify-center items-center py-16">
           <h1 className="font-medium text-[clamp(48px,8vw,120px)] flex items-center leading-none">
-            <span className="opacity-80">Get</span>
+            <span>Get</span>
             <ImageSlideshow />
-            <span className="opacity-80">Aligned</span>
+            <span>Aligned</span>
           </h1>
         </div>
 
@@ -82,7 +82,7 @@ const Footer = memo(function Footer() {
           <p>©{currentYear} Aligned. All rights reserved.</p>
           <a
             href="mailto:info@aligned.com"
-            className="underline underline-offset-2 hover:text-black transition"
+            className="underline underline-offset-2 hover:text-[#145DA1] transition"
           >
             info@aligned.com
           </a>

@@ -53,16 +53,6 @@ export default function Bento() {
         "Brand films"
       ]
     },
-    {
-      title: "Leadership",
-      items: [
-        "Founder positioning strategy",
-        "Executive narrative development",
-        "Thought leadership frameworks",
-        "LinkedIn authority systems",
-        "Leadership films"
-      ]
-    }
   ];
 
   return (
@@ -82,7 +72,7 @@ export default function Bento() {
       {/* Header */}
       <div className="flex flex-col items-center text-center max-w-2xl">
 
-        <h1 className="text-h4 md:text-h3 lg:text-h2 font-[500] tracking-tight">
+        <h1 className="text-h4 md:text-h3 lg:text-h2 font-[500] text-[#145DA1] tracking-tight">
           Strategic expertise you can build on
         </h1>
 
@@ -92,42 +82,50 @@ export default function Bento() {
 
       </div>
 
-      {/* Bento Grid */}
-      <div
-        className="
-          grid
-          grid-cols-1
-          sm:grid-cols-2
-          lg:grid-cols-3
-          gap-6
-          w-full
-          max-w-7xl
-        "
-      >
-        {sections.map((section, i) => (
-          <div
-            key={i}
-            className="
-              border border-[#a8a8a8]
-              rounded-2xl
-              p-6 sm:p-7
-              min-h-[200px]
-              transition
-              hover:shadow-lg
-            "
-          >
-            <h3 className="text-h6 md:text-h5 font-medium mb-3">
-              {section.title}
-            </h3>
+      {/* Grid */}
+      <div className="w-full max-w-7xl flex flex-col gap-6">
 
-            <ul className="space-y-1.5 opacity-70 text-sm md:text-paragraph">
-              {section.items.map((item, j) => (
-                <li key={j}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {/* Top 3 */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sections.slice(0, 3).map((section, i) => (
+            <Card key={i} section={section} />
+          ))}
+        </div>
+
+        {/* Bottom 2 (CENTERED) */}
+        <div className="flex justify-center gap-6 flex-wrap">
+          {sections.slice(3).map((section, i) => (
+            <div className="w-full sm:w-[48%] lg:w-[32%]" key={i}>
+              <Card section={section} />
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
+  );
+}
+
+function Card({ section }) {
+  return (
+    <div
+      className="
+        border-2 border-[#000]
+        rounded-2xl
+        p-4
+        min-h-[200px]
+        h-full
+      "
+    >
+      <h3 className="text-h6 md:text-h5 font-medium mb-3">
+        {section.title}
+      </h3>
+
+      <ul className="space-y-1.5 opacity-70 text-sm md:text-paragraph">
+        {section.items.map((item, j) => (
+          <li key={j}>{item}</li>
+        ))}
+      </ul>
+    </div>
   );
 }

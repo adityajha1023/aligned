@@ -17,7 +17,8 @@ export default function Cta2() {
           w-full
           max-w-7xl
           min-h-[60vh]
-          bg-[#D0E8F6]/80
+          bg-[#145DA1]
+          text-[#F7F3CD]
           rounded-3xl
           overflow-hidden
           px-6 sm:px-10 lg:px-12
@@ -37,11 +38,11 @@ export default function Cta2() {
             Are we the right fit for you?
           </h1>
 
-          <p className="text-h6 text-neutral-700 mb-4">
+          <p className="text-h6 text-[#F3F7CD] mb-4">
             We’re best <i>ALIGNED</i> with organisations that:
           </p>
 
-          <ul className="text-paragraph text-neutral-700 space-y-2 mb-6 pl-4 list-disc">
+          <ul className="text-paragraph text-[neutral-700] space-y-2 mb-6 pl-4 list-disc">
             <li>Are scaling and need sharper market positioning</li>
             <li>Want their identity to reflect real ambition</li>
             <li>Understand that leadership visibility builds trust</li>
@@ -49,12 +50,12 @@ export default function Cta2() {
             <li>Are building for long-term authority, not quick attention</li>
           </ul>
 
-          <p className="text-paragraph text-black mb-8">
+          <p className="text-paragraph text-[#F7F3CD] mb-8">
             We don’t operate as a marketing vendor.  
             We work as strategic partners.
           </p>
 
-          <button className="bg-black text-white rounded-full px-6 py-3 text-paragraph font-medium shadow-md hover:scale-105 transition">
+          <button className="bg-[#F7F3CD] text-[#145DA1] rounded-full px-6 py-3 text-paragraph font-medium shadow-md hover:scale-105 transition">
             Book a Call
           </button>
 

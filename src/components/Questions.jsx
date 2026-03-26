@@ -17,7 +17,7 @@ export default function Questions() {
       "
     >
       {/* Heading */}
-      <h2 className="text-h4 md:text-h3 lg:text-h2 font-medium text-[#1F2455] max-w-3xl">
+      <h2 className="text-h4 md:text-h3 lg:text-h2 font-medium text-[#145DA1] max-w-3xl">
         The questions{" "}
         <span className="opacity-40 text-black">
           founders and CXOs <br className="hidden sm:block" />
@@ -73,7 +73,7 @@ export default function Questions() {
       <div className="flex flex-col items-center gap-4 w-full mt-16">
         <a
           href="/#contact"
-          className="bg-black rounded-full px-6 py-3 text-white text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200">
+          className="bg-[#145DA1] text-[#F7F3CD] rounded-full px-6 py-3 text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200">
           Let's Work Together
         </a>
 

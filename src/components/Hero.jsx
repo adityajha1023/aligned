@@ -19,7 +19,7 @@ const Hero = memo(function Hero() {
           leading-tight
           tracking-tight
           max-w-full
-          lg:max-w-4xl
+          lg:max-w-4xl text-[#145DA1]
         ">
           We Build B2B Brands <br />
           & The Leaders Behind Them.
@@ -28,7 +28,6 @@ const Hero = memo(function Hero() {
         {/* Paragraph */}
         <p className="
           text-paragraph
-          opacity-70
           max-w-md
           md:max-w-lg
           lg:max-w-xl
@@ -40,8 +39,8 @@ const Hero = memo(function Hero() {
         <a
           href="/#contact"
           className="
-            bg-black
-            text-white
+            bg-[#145DA1]
+            text-[#F7F3CD]
             text-paragraph
             font-[500]
             rounded-full
