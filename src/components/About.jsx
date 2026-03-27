@@ -115,7 +115,7 @@ function About() {
               key={index}
               className={
                 index >= breakIndex
-                  ? "text-paragraph md:text-h6 lg:text-h5"
+                  ? "text-h6 md:text-h6 lg:text-h5"
                   : ""
               }
               style={{

@@ -20,6 +20,7 @@ const Hero = memo(function Hero() {
           tracking-tight
           max-w-full
           lg:max-w-4xl text-[#145DA1]
+          animate-textReveal [animation-delay:0.5s]
         ">
           We Build B2B Brands <br />
           & The Leaders Behind Them.

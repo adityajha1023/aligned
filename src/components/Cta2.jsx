@@ -1,4 +1,5 @@
 import React from "react";
+import RightFit from "../assets/RightFit.webp";
 
 export default function Cta2() {
   return (
@@ -6,7 +7,7 @@ export default function Cta2() {
       className="
         w-full
         min-h-[90vh] lg:min-h-screen
-        flex items-center justify-center
+        flex items-center justify-between
         px-4 sm:px-6 lg:px-12
         font-bricolage
       "
@@ -16,24 +17,33 @@ export default function Cta2() {
           relative
           w-full
           max-w-7xl
-          min-h-[60vh]
-          bg-[#145DA1]
-          text-[#F7F3CD]
+          h-fit
           rounded-3xl
           overflow-hidden
           px-6 sm:px-10 lg:px-12
           py-12 lg:py-16
-          flex items-center
+          flex
+          flex-col lg:flex-row justify-center
+          items-center
+          gap-8 lg:gap-12
         "
       >
-        {/* Background shape */}
-        <div className="absolute right-[-80px] sm:right-[-120px] top-1/2 -translate-y-1/2 opacity-40 pointer-events-none">
-          <div className="w-[240px] sm:w-[320px] lg:w-[420px] h-[240px] sm:h-[320px] lg:h-[420px] rounded-full border-[24px] sm:border-[32px] lg:border-[40px] border-[#145DA2]" />
+        {/* Image */}
+        <div className="w-screen px-4 relative lg:w-1/2 flex justify-center">
+          <img
+            src={RightFit}
+            alt=""
+            className="
+               w-full
+               h-auto
+               object-cover
+               lg:object-contain"
+          />
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-md md:max-w-xl lg:max-w-2xl">
-
+        <div className="relative z-10 w-full lg:w-1/2 max-w-md md:max-w-xl lg:max-w-2xl text-center lg:text-left">
+          {/* 
           <h1 className="text-h4 md:text-h3 lg:text-h2 font-medium tracking-tight mb-6">
             Are we the right fit for you?
           </h1>
@@ -53,12 +63,12 @@ export default function Cta2() {
           <p className="text-paragraph text-[#F7F3CD] mb-8">
             We don’t operate as a marketing vendor.  
             We work as strategic partners.
-          </p>
+          </p> 
+          */}
 
-          <button className="bg-[#F7F3CD] text-[#145DA1] rounded-full px-6 py-3 text-paragraph font-medium shadow-md hover:scale-105 transition">
+          <button className="bg-[#145DA1] text-[#F7F3CD] rounded-full px-6 py-3 text-paragraph font-medium shadow-md hover:scale-105 transition">
             Book a Call
           </button>
-
         </div>
       </div>
     </section>
