@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import contactImg from "../assets/contact.webp";
 
 function Contact() {
   const [service, setService] = useState("");
@@ -120,32 +121,9 @@ function Contact() {
         </div>
 
         {/* Right: Gradient Card */}
-        <div
-          className="
-            w-full
-            lg:w-[360px]
-            min-h-[220px]
-            lg:min-h-[420px]
-            p-6 sm:p-8
-            flex justify-end items-end
-            text-right
-            font-medium
-            text-h6
-            bg-gradient-to-b
-            from-white
-            to-[#D0E8F6]
-            rounded-xl
-          "
-        >
-          <h3>
-            Make your brand <br />
-            ALN'D. <br />
-            Recognised. <br />
-            Remembered.
-          </h3>
-        </div>
+        <img src={contactImg} alt="Contact" className="w-[100%] lg:w-[30%]"/>
 
-      </div>
+      </div> 
     </section>
   );
 }

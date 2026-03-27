@@ -7,7 +7,7 @@ export default function Cta2() {
       className="
         w-full
         min-h-[90vh] lg:min-h-screen
-        flex items-center justify-between
+        flex items-center justify-center
         px-4 sm:px-6 lg:px-12
         font-bricolage
       "
