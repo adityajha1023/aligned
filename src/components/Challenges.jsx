@@ -1,13 +1,18 @@
-import { ChartNoAxesCombined, Sprout, Hourglass } from "lucide-react";
+import React from "react";
 import InstitutionalScale from "../assets/institutionalscale.png";
 import EarlyTraction from "../assets/earlytraction.png";
 import Expansion from "../assets/expansion.png";
-import React from "react";
 
 export default function Challenges() {
   const cards = [
     {
-      icon: <img src={EarlyTraction} alt="Early Traction" className="opacity-50 h-[35px] w-[35px]" />,
+      icon: (
+        <img
+          src={EarlyTraction}
+          alt="Early Traction"
+          className="opacity-50 h-[35px] w-[35px]"
+        />
+      ),
       title: "Early Traction",
       focus: "Direction and clarity.",
       items: [
@@ -15,11 +20,17 @@ export default function Challenges() {
         "Defining what the brand stands for",
         "Building a cohesive identity system",
         "Structuring foundational messaging",
-        "Establishing founder voice in the market"
-      ]
+        "Establishing founder voice in the market",
+      ],
     },
     {
-      icon: <img src={Expansion} alt="Expansion" className="opacity-50 h-[40px] w-[40px]" />,
+      icon: (
+        <img
+          src={Expansion}
+          alt="Expansion"
+          className="opacity-50 h-[40px] w-[40px]"
+        />
+      ),
       title: "Expansion",
       focus: "Consistency and authority.",
       items: [
@@ -27,11 +38,17 @@ export default function Challenges() {
         "Aligning teams around a unified narrative",
         "Formalising brand guidelines and governance",
         "Elevating executive visibility",
-        "Ensuring identity reflects growing scale"
-      ]
+        "Ensuring identity reflects growing scale",
+      ],
     },
     {
-      icon: <img src={InstitutionalScale} alt="Institutional Scale" className="opacity-50 h-[40px] w-[40px]" />,
+      icon: (
+        <img
+          src={InstitutionalScale}
+          alt="Institutional Scale"
+          className="opacity-50 h-[40px] w-[40px]"
+        />
+      ),
       title: "Institutional Scale",
       focus: "Structure and longevity.",
       items: [
@@ -39,9 +56,9 @@ export default function Challenges() {
         "Strengthening leadership credibility externally",
         "Avoiding brand dilution during rapid growth",
         "Embedding brand into internal culture",
-        "Sustaining long-term market authority"
-      ]
-    }
+        "Sustaining long-term market authority",
+      ],
+    },
   ];
 
   return (
@@ -97,9 +114,17 @@ export default function Challenges() {
               {card.title}
             </h2>
 
-            <ul className="list-disc text-[#F3F7CD] space-y-1.5 text-sm md:text-paragraph">
+            {/* List with vertical connector line */}
+            <ul className="relative pl-0 space-y-0 text-sm md:text-paragraph">
+              {/* Vertical line */}
+              <span className="absolute -left-[13px] top-0 bottom-0 w-[2px] bg-[#F7F3CD]/40"></span>
+
               {card.items.map((item, j) => (
-                <li key={j}>{item}</li>
+                <li key={j} className="relative">
+                  {/* Bullet */}
+                  <span className="absolute -left-4 top-[8px] h-2 w-2 rounded-full bg-[#F7F3CD]"></span>
+                  {item}
+                </li>
               ))}
             </ul>
 
