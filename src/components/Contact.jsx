@@ -6,6 +6,7 @@ function Contact() {
 
   return (
     <section
+      data-reveal
       id="contact"
       className="
         flex justify-center items-center

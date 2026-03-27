@@ -30,6 +30,7 @@ export default function Services() {
 
   return (
     <section
+      data-reveal
       id="services"
       className="
         w-full

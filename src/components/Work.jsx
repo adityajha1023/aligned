@@ -21,6 +21,7 @@ function Work() {
 
   return (
     <section
+      data-reveal
       id="work"
       className="
         w-full

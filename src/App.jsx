@@ -1,4 +1,5 @@
 import React, { lazy, Suspense, useEffect, useState, memo } from "react";
+import useRevealOnScroll from "./lib/useRevealOnScroll";
 
 const Hero = lazy(() => import("./components/Hero"));
 const Features = lazy(() => import("./components/Features"));
@@ -31,6 +32,8 @@ function App() {
 
     return () => window.removeEventListener("resize", checkScreen);
   }, []);
+
+  useRevealOnScroll();
 
   return (
     <div className="h-auto w-full">

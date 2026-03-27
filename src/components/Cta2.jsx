@@ -4,6 +4,7 @@ import RightFit from "../assets/RightFit.webp";
 export default function Cta2() {
   return (
     <section
+      data-reveal
       className="
         w-full
         min-h-[90vh] lg:min-h-screen

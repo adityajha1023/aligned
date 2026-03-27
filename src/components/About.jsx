@@ -56,6 +56,7 @@ function About() {
 
   return (
     <section
+      data-reveal
       ref={sectionRef}
       id="about"
       className="

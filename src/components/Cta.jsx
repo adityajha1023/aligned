@@ -4,6 +4,7 @@ import React from "react";
 function Cta() {
   return (
     <section
+      data-reveal
       className="
         w-full
         py-16 sm:py-20 lg:py-28

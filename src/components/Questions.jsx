@@ -4,6 +4,7 @@ import questionspng from "../assets/question.png";
 export default function Questions() {
   return (
     <section
+      data-reveal
       className="
         w-full
         min-h-[90vh] h-[100vh]

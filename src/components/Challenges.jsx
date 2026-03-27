@@ -1,10 +1,13 @@
-import { ChartNoAxesCombined, Sprout, TruckElectric } from "lucide-react";
+import { ChartNoAxesCombined, Sprout, Hourglass } from "lucide-react";
+import InstitutionalScale from "../assets/institutionalscale.png";
+import EarlyTraction from "../assets/earlytraction.png";
+import Expansion from "../assets/expansion.png";
 import React from "react";
 
 export default function Challenges() {
   const cards = [
     {
-      icon: <TruckElectric className="opacity-50" size={40} strokeWidth={1.2} />,
+      icon: <img src={EarlyTraction} alt="Early Traction" className="opacity-50 h-[35px] w-[35px]" />,
       title: "Early Traction",
       focus: "Direction and clarity.",
       items: [
@@ -16,7 +19,7 @@ export default function Challenges() {
       ]
     },
     {
-      icon: <Sprout className="opacity-50" size={40} strokeWidth={1.2} />,
+      icon: <img src={Expansion} alt="Expansion" className="opacity-50 h-[40px] w-[40px]" />,
       title: "Expansion",
       focus: "Consistency and authority.",
       items: [
@@ -28,7 +31,7 @@ export default function Challenges() {
       ]
     },
     {
-      icon: <ChartNoAxesCombined className="opacity-50" size={40} strokeWidth={1.2} />,
+      icon: <img src={InstitutionalScale} alt="Institutional Scale" className="opacity-50 h-[40px] w-[40px]" />,
       title: "Institutional Scale",
       focus: "Structure and longevity.",
       items: [
@@ -43,6 +46,7 @@ export default function Challenges() {
 
   return (
     <section
+      data-reveal
       className="
         w-full
         mb-20

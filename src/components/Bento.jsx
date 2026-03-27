@@ -57,6 +57,7 @@ export default function Bento() {
 
   return (
     <section
+      data-reveal
       className="
         w-full
         min-h-[90vh] lg:min-h-screen
