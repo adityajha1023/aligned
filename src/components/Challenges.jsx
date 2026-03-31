@@ -1,7 +1,7 @@
 import React from "react";
 import InstitutionalScale from "../assets/Institutionalscale.png";
 import EarlyTraction from "../assets/earlytraction.png";
-import Expansion from "../assets/expansion.png";
+import Expansion from "../assets/Expansion.png";
 
 export default function Challenges() {
   const cards = [
