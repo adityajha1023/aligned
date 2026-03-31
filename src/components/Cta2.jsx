@@ -24,7 +24,7 @@ export default function Cta2() {
           px-6 sm:px-10 lg:px-12
           py-12 lg:py-16
           flex
-          flex-col
+          flex-row
           items-center
           justify-center
           gap-8

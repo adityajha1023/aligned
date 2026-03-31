@@ -11,7 +11,7 @@ export default function Questions() {
         flex flex-col
         justify-center
         items-start
-        px-4 sm:px-6 lg:px-28
+        px-4 sm:px-6 lg:px-32
         font-bricolage
         my-20
         relative
