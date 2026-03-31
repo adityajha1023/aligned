@@ -104,14 +104,14 @@ function Cta() {
             "
           >
             {/* Play */}
-            <button className="p-3 sm:p-4 rounded-full bg-[#F7F3CD] flex items-center justify-center shadow-md hover:scale-105 transition">
+            {/* <button className="p-3 sm:p-4 rounded-full bg-[#F7F3CD] flex items-center justify-center shadow-md hover:scale-105 transition">
               <Play className="w-5 h-5 sm:w-6 sm:h-6 text-[#145DA1]" fill="#145DA1" />
-            </button>
+            </button> */}
 
             {/* Button */}
-            <button className="border-2 bg-[#F7F3CD] rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-[#145DA1] text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200 whitespace-nowrap">
+            {/* <button className="border-2 bg-[#F7F3CD] rounded-full px-5 sm:px-6 py-2.5 sm:py-3 text-[#145DA1] text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200 whitespace-nowrap">
               Build your Identity
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

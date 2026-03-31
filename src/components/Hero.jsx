@@ -22,8 +22,8 @@ const Hero = memo(function Hero() {
           lg:max-w-4xl text-[#145DA1]
           animate-textReveal [animation-delay:0.5s]
         ">
-          We Build B2B Brands <br />
-          & The Leaders Behind Them.
+          We Build Brands With Authority <br />
+          And The Leaders Behind Them.
         </h1>
 
         {/* Paragraph */}
@@ -33,12 +33,12 @@ const Hero = memo(function Hero() {
           md:max-w-lg
           lg:max-w-xl
         ">
-          Strategic positioning and identity systems, built in partnership with founders and executive teams.
-        </p>
+          Strategic positioning, identity systems, and brand communication built with founders and executive teams.
+          </p>
 
         {/* CTA */}
         <a
-          href="/#contact"
+          href="https://calendly.com/shreya-aligned/30min"
           className="
             bg-[#145DA1]
             text-[#F7F3CD]

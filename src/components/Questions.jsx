@@ -73,7 +73,7 @@ export default function Questions() {
       {/* CTA */}
       <div className="flex flex-col items-center gap-4 w-full mt-16">
         <a
-          href="/#contact"
+          href="https://calendly.com/shreya-aligned/30min"
           className="bg-[#145DA1] text-[#F7F3CD] rounded-full px-6 py-3 text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200">
           Let's Work Together
         </a>
