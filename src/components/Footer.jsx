@@ -54,10 +54,10 @@ const Footer = memo(function Footer() {
           {/* Menu */}
           <div className="flex flex-col gap-1">
             <h4 className="text-h6 font-[500] py-2">Menu</h4>
-            <a href="#" className="text-paragrap text-[#145DA1] transition">
+            <a href="#work" className="text-paragrap text-[#145DA1] transition">
               Work
             </a>
-            <a href="#" className="text-paragrap text-[#145DA1] transition">
+            <a href="#contact" className="text-paragrap text-[#145DA1] transition">
               Contact
             </a>
           </div>
@@ -65,10 +65,10 @@ const Footer = memo(function Footer() {
           {/* Socials */}
           <div className="flex flex-col gap-1 sm:text-right">
             <h4 className="text-h6 font-[500] py-2">Socials</h4>
-            <a href="#" className="text-paragraph text-[#145DA1] transition">
+            <a href="/" className="text-paragraph text-[#145DA1] transition">
               Instagram
             </a>
-            <a href="#" className="text-paragraph text-[#145DA1] transition">
+            <a href="mailto:connect@byaligned.com" className="text-paragraph text-[#145DA1] transition">
               Email
             </a>
           </div>
@@ -88,10 +88,10 @@ const Footer = memo(function Footer() {
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-paragraph">
           <p>©{currentYear} Aligned. All rights reserved.</p>
           <a
-            href="mailto:info@aligned.com"
+            href="mailto:connect@byaligned.com"
             className="underline underline-offset-2 hover:text-[#145DA1] transition"
           >
-            info@aligned.com
+            connect@byaligned.com
           </a>
         </div>
 

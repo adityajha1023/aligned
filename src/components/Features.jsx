@@ -44,7 +44,7 @@ export default function Services() {
         className="
           max-w-7xl
           w-full
-          flex flex-col lg:flex-row
+          flex flex-col lg:flex-row justify-center
           items-center
           gap-12 lg:gap-24
           py-16 lg:py-24
