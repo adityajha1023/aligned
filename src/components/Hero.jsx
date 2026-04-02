@@ -1,5 +1,4 @@
 import React, { lazy, Suspense, memo } from "react";
-import heroImg from "../assets/hero_image.webp";
 
 const CircularGallery = lazy(() => import("./CircularGallery"));
 
@@ -8,18 +7,20 @@ const Hero = memo(function Hero() {
     <div className="w-full">
 
       {/* Hero Content */}
-      <div className="pt-12 md:pt-16 lg:pt-20 px-4 sm:px-6 flex flex-col items-start md:items-center gap-4 md:gap-5 lg:gap-6 text-left md:text-center font-bricolage">
+      <div className="pt-12 md:pt-16 lg:pt-20 px-6 md:px-16 lg:px-20 flex flex-col items-start md:items-center gap-4 md:gap-5 lg:gap-6 text-left md:text-center font-bricolage">
 
         {/* Heading */}
         <h1 className="
-          text-h3 
-          md:text-h2 
+          text-h3
+          md:text-h2
           lg:text-h1
           font-[500]
           leading-tight
           tracking-tight
           max-w-full
-          lg:max-w-4xl text-[#145DA1]
+          md:max-w-2xl
+          lg:max-w-4xl
+          text-[#145DA1]
           animate-textReveal [animation-delay:0.5s]
         ">
           We Build Brands With Authority <br />
@@ -34,11 +35,11 @@ const Hero = memo(function Hero() {
           lg:max-w-xl
         ">
           Strategic positioning, identity systems, and brand communication built with founders and executive teams.
-          </p>
+        </p>
 
         {/* CTA */}
-        <a
-          href="https://calendly.com/shreya-aligned/30min"
+        
+        <a  href="https://calendly.com/shreya-aligned/30min"
           className="
             bg-[#145DA1]
             text-[#F7F3CD]
@@ -63,7 +64,7 @@ const Hero = memo(function Hero() {
         relative w-full
         h-[380px]
         sm:h-[420px]
-        md:h-[520px]
+        md:h-[500px]
         lg:h-[640px]
         mt-6
       ">

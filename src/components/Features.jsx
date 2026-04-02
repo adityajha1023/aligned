@@ -34,20 +34,21 @@ export default function Services() {
       id="services"
       className="
         w-full
-        min-h-[90vh] lg:min-h-screen
+        min-h-[90vh]
         flex items-center justify-center
         font-bricolage
-        px-4 sm:px-6 lg:px-12 text-[#145DA1]
+        px-6 md:px-16 lg:px-12
+        text-[#145DA1]
       "
     >
       <div
         className="
           max-w-7xl
           w-full
-          flex flex-col lg:flex-row justify-center
+          flex flex-col md:flex-row lg:flex-row justify-center
           items-center
-          gap-12 lg:gap-24
-          py-16 lg:py-24
+          gap-8 md:gap-14 lg:gap-24
+          py-12 md:py-16 lg:py-24
         "
       >
         {/* LEFT CONTENT */}
@@ -58,8 +59,7 @@ export default function Services() {
           </h1>
 
           {/* SERVICES LIST */}
-          <div className="mt-6 flex flex-col gap-4 sm:gap-5">
-
+          <div className="mt-4 md:mt-6 flex flex-col gap-3 md:gap-4 lg:gap-5">
             {services.map((s) => (
               <div
                 key={s.id}
@@ -69,7 +69,7 @@ export default function Services() {
                 className="cursor-pointer flex items-center gap-4 transition-all"
               >
                 <span
-                  className={`text-h6 md:text-h5 lg:text-h4 transition-all ${
+                  className={`text-h6 md:text-h6 lg:text-h4 transition-all ${
                     active === s.id
                       ? "text-[#145DA1] font-medium"
                       : "text-[#145DA1]/30"
@@ -97,11 +97,11 @@ export default function Services() {
           className="
             relative
             w-full
-            max-w-[340px]
-            sm:max-w-[420px]
+            max-w-[300px]
+            md:max-w-[400px]
             lg:max-w-[520px]
-            h-[280px]
-            sm:h-[320px]
+            h-[260px]
+            md:h-[320px]
             lg:h-[420px]
             flex items-center justify-center
           "
@@ -112,7 +112,7 @@ export default function Services() {
             if (Math.abs(position) > 1) return null;
 
             const base =
-              "absolute w-[200px] sm:w-[200px] lg:w-[260px] h-[260px] sm:h-[260px] lg:h-[320px] object-cover rounded-2xl transition-all duration-500 ease-out border border-[#ccc]";
+              "absolute w-[180px] md:w-[220px] lg:w-[260px] h-[240px] md:h-[280px] lg:h-[320px] object-cover rounded-2xl transition-all duration-500 ease-out border border-[#ccc]";
 
             let transform = "";
             let z = "";
@@ -121,7 +121,7 @@ export default function Services() {
 
             if (position === -1) {
               transform =
-                "-translate-x-16 sm:-translate-x-24 lg:-translate-x-32 -translate-y-4 sm:-translate-y-6 scale-90";
+                "-translate-x-14 md:-translate-x-20 lg:-translate-x-32 -translate-y-4 md:-translate-y-5 lg:-translate-y-6 scale-90";
               z = "z-10";
               opacity = "opacity-40";
               shadow = "shadow-md";
@@ -132,7 +132,7 @@ export default function Services() {
               shadow = "shadow-2xl";
             } else if (position === 1) {
               transform =
-                "translate-x-16 sm:translate-x-24 lg:translate-x-32 translate-y-4 sm:translate-y-6 scale-90";
+                "translate-x-14 md:translate-x-20 lg:translate-x-32 translate-y-4 md:translate-y-5 lg:translate-y-6 scale-90";
               z = "z-20";
               opacity = "opacity-40";
               shadow = "shadow-md";

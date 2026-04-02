@@ -7,13 +7,13 @@ export default function Questions() {
       data-reveal
       className="
         w-full
-        min-h-[90vh] h-[100vh]
+        min-h-[80vh] md:min-h-[90vh]
         flex flex-col
         justify-center
         items-start
-        px-4 sm:px-6 lg:px-32
+        px-4 sm:px-6 md:px-12 lg:px-32
         font-bricolage
-        my-20
+        my-16 md:my-20
         relative
       "
     >
@@ -61,12 +61,12 @@ export default function Questions() {
         src={questionspng}
         alt="Questions"
         className="
-          hidden lg:block
+          hidden md:block lg:block
           absolute
-          right-20
-          bottom-40
+          right-8 md:right-16 lg:right-20
+          bottom-24 md:bottom-32 lg:bottom-40
           opacity-20
-          h-[18rem]
+          h-[14rem] md:h-[16rem] lg:h-[18rem]
         "
       />
 

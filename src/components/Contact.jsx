@@ -55,17 +55,17 @@ function Contact() {
     >
       <div
         className="
-          flex flex-col lg:flex-row
+          flex flex-col md:flex-row lg:flex-row
           justify-between
-          items-start lg:items-center
-          gap-12 lg:gap-20
+          items-start md:items-start lg:items-center
+          gap-10 md:gap-12 lg:gap-20
           w-full
           max-w-7xl
           font-bricolage
         "
       >
         {/* Left: Form */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full md:w-1/2 lg:w-1/2">
 
           <h2 className="text-h4 md:text-h3 lg:text-h2 font-medium text-[#145DA1]">
             Have questions?
@@ -164,7 +164,7 @@ function Contact() {
         </div>
 
         {/* Right: Gradient Card */}
-        <img src={contactImg} alt="Contact" className="w-[100%] lg:w-[30%]"/>
+        <img src={contactImg} alt="Contact" className="w-full md:w-[45%] lg:w-[30%] object-cover"/>
 
       </div> 
     </section>
