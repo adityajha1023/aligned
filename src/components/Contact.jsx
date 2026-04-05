@@ -163,7 +163,7 @@ function Contact() {
           </form>
         </div>
 
-        {/* Right: Gradient Card */}
+        {/* Right: Contact Image */}
         <img src={contactImg} alt="Contact" className="w-full md:w-[45%] lg:w-[30%] object-cover"/>
 
       </div> 
