@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 function About() {
   const textContent =
-    "Strong brands are shaped from the top down. We ALIGN company positioning with executive presence - as one system.";
+    "Strong brands are shaped from the top down. We ALIGN brand positioning and executive presence to build authority as one system.";
 
   const words = textContent.split(" ");
 
@@ -60,7 +60,8 @@ function About() {
       ref={sectionRef}
       id="about"
       className="
-        min-h-[70vh]
+        h-screen md:h-[40vh]
+        lg:h-[70vh]
         px-4 sm:px-6
         flex flex-col
         items-center

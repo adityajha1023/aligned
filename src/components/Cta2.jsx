@@ -7,9 +7,9 @@ export default function Cta2() {
       data-reveal
       className="
         w-full
-        min-h-[90vh] lg:min-h-screen
         flex items-center justify-center
-        px-4 sm:px-6 lg:px-12
+        px-0 sm:px-6 lg:px-12
+        py-12 sm:py-16 lg:py-20
         font-bricolage
       "
     >
@@ -18,31 +18,65 @@ export default function Cta2() {
           relative
           w-full
           max-w-7xl
-          h-fit
           rounded-3xl
           overflow-hidden
           px-6 sm:px-10 lg:px-12
-          py-12 lg:py-16
-          flex flex-col
-          lg:flex-row
+          py-10 lg:py-16
+          flex flex-col lg:flex-row
           items-center
-          justify-center
-          gap-8
+          justify-evenly
+          gap-10 lg:gap-16
         "
       >
         {/* Image */}
-        <div className="w-full max-w-lg flex justify-center">
+        <div className="w-full max-w-xl flex justify-center">
           <img
             src={RightFit}
-            alt=""
-            className="w-full h-auto object-contain"
+            alt="Brand alignment illustration"
+            className="w-full object-cover"
           />
         </div>
 
-        {/* Button */}
-        <a href="https://calendly.com/shreya-aligned/30min" className="bg-[#145DA1] text-[#F7F3CD] rounded-full px-6 py-3 text-paragraph font-medium shadow-md hover:scale-105 transition">
-          Book a Call
-        </a>
+        {/* Content */}
+        <div className="flex flex-col lg:flex-col items-center lg:items-start gap-6 text-center lg:text-left">
+
+          {/* Cards wrapper */}
+          <div className="flex flex-col md:flex-row lg:flex-col gap-6 w-full justify-center lg:justify-start">
+
+            <div className="bg-[#145DA1] text-[#F7F3CD] flex flex-col rounded-md px-6 py-2 lg:py-6 text-sm sm:text-base font-medium shadow-md text-center w-full lg:w-[15rem] md:w-[17rem]">
+              <span className="text-2xl sm:text-3xl font-bold">40+</span>
+              brands aligned, <br /> and counting
+            </div>
+
+            <div className="bg-[#145DA1] text-[#F7F3CD] flex flex-col rounded-md px-6 py-2 lg:py-6 text-sm sm:text-base font-medium shadow-md text-center w-full lg:w-[15rem] md:w-[17rem]">
+              <span className="text-2xl sm:text-3xl font-bold">3X</span>
+              engagement lift <br /> for our clients
+            </div>
+
+          </div>
+
+          {/* Button (always below) */}
+          <a
+            href="https://calendly.com/shreya-aligned/30min"
+            className="
+            lg:w-[15rem] w-fit text-center
+            border-2 border-[#145DA1]
+            bg-[#F7F3CD]
+            text-[#145DA1]
+            rounded-full
+            px-6 py-3
+            text-sm sm:text-base
+            font-medium
+            shadow-md
+            hover:scale-105
+            transition-all duration-200
+            hover:bg-[#145DA1]
+            hover:text-[#F7F3CD]"
+          >
+            Start the Conversation
+          </a>
+
+        </div>
       </div>
     </section>
   );

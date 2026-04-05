@@ -49,7 +49,7 @@ function Contact() {
       id="contact"
       className="
         flex justify-center items-center
-        h-[100vh]
+        h-[120vh] md:h-[50vh] lg:h-[80vh]
         px-4 sm:px-6 lg:px-12
       "
     >
@@ -72,7 +72,7 @@ function Contact() {
           </h2>
 
           <span className="text-h5 md:text-h4 lg:text-h3 font-medium block mt-2">
-            We're listening
+            Let's Talk!
           </span>
 
           <form  onSubmit={handleSubmit} className="flex flex-col space-y-6 mt-8 max-w-md">
@@ -125,7 +125,7 @@ function Contact() {
                 font-medium
               "
             >
-              <option value="">Book You Free Audit</option>
+              <option value="">Book Your Free Audit</option>
               <option value="Brand & Positioning">
                 Brand & Positioning 
               </option>

@@ -25,7 +25,7 @@ function Work() {
       id="work"
       className="
         w-full
-        min-h-[90vh] lg:min-h-screen
+        h-[80vh] md:h-[50vh] lg:h-[80vh]
         flex flex-col
         justify-center
         items-center
@@ -46,7 +46,7 @@ function Work() {
         </h1>
 
         <p className="text-paragraph text-neutral-700 mt-2">
-          A selection of brands we've brought into <span className="text-[#145DA1] font-bold">ALIGNMENT</span>
+          A selection of brands we've helped <span className="text-[#145DA1] font-bold">ALIGN</span> for growth.
         </p>
 
       </div>

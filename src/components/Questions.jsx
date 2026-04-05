@@ -6,8 +6,8 @@ export default function Questions() {
     <section
       data-reveal
       className="
-        w-full
-        min-h-[80vh] md:min-h-[90vh]
+        w-full h-[screen]
+        lg:h-[80vh] md:h-[70vh]
         flex flex-col
         justify-center
         items-start
@@ -71,15 +71,15 @@ export default function Questions() {
       />
 
       {/* CTA */}
-      <div className="flex flex-col items-center gap-4 w-full mt-16">
+      <div className="flex flex-col items-center gap-4 w-full mt-10">
         <a
           href="https://calendly.com/shreya-aligned/30min"
           className="bg-[#145DA1] text-[#F7F3CD] rounded-full px-6 py-3 text-paragraph font-[500] shadow-md hover:scale-105 transition-transform duration-200">
-          Let's Work Together
+          Book an Intro Call
         </a>
 
         <p className="text-paragraph text-center">
-          Book a call and clear your doubts right away
+          A focused conversation on positioning, authority, and brand alignment.
         </p>
       </div>
     </section>

@@ -6,6 +6,8 @@ function Cta() {
     <section
       data-reveal
       className="
+        h-screen md:h-[50vh]
+        lg:h-[70vh]
         w-full
         py-16 sm:py-20 lg:py-28
         flex items-center justify-center
@@ -71,7 +73,7 @@ function Cta() {
             "
           >
             Strong brands are built through <br />
-            structure — not just marketing.
+            structure - not just marketing.
           </h1>
 
           {/* Sub */}
@@ -81,15 +83,14 @@ function Cta() {
 
           {/* Body */}
           <p className="text-paragraph text-[#F7F3CD] mb-5 sm:mb-6 leading-relaxed opacity-90">
-            We work with founders and executive teams to define market
-            positioning, build identity systems, and strengthen leadership
-            presence — so the company and its leadership move in the same
-            direction.
+            We work with founders and leadership teams to define
+            positioning, build identity systems, and strengthen executive
+            presence - so the brand and the people behind it move with clarity and authority
           </p>
 
           <p className="text-paragraph text-[#F7F3CD] mb-8 sm:mb-10">
             <span className="font-semibold">
-              Positioning. Identity. Executive authority.
+              Positioning. Identity. Leadership authority.
             </span>
             <br />
             Built as one connected system.

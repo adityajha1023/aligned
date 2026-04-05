@@ -52,6 +52,16 @@ export default function Bento() {
         "Brand films",
       ],
     },
+    {
+      title: "Growth & Demand",
+      items: [
+        "Go-to-market strategy",
+        "Demand generation systems",
+        "Distribution planning",
+        "Funnel and conversion strategy",
+        "Performance marketing direction",
+      ],
+    },
   ];
 
   return (
@@ -105,7 +115,7 @@ function Card({ section }) {
   return (
     <div
       className="
-        border-2 border-black
+        border-2 border-[#a8a8a8]
         rounded-2xl
         p-5
         h-full

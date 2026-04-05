@@ -45,7 +45,7 @@ const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="font-bricolage py-12 px-4 sm:px-6 lg:px-16 text-[#145DA1] mt-20">
+    <footer className="font-bricolage py-12 px-4 sm:px-6 lg:px-16 text-[#145DA1] mt-10">
       <div className="max-w-7xl mx-auto">
 
         {/* Top Navigation */}

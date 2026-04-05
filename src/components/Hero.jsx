@@ -34,7 +34,7 @@ const Hero = memo(function Hero() {
           md:max-w-lg
           lg:max-w-xl
         ">
-          Strategic positioning, identity systems, and brand communication built with founders and executive teams.
+          Strategic positioning, identity systems, and brand communication for founders and expert-led businesses ready to look as credible as they truly are.
         </p>
 
         {/* CTA */}
@@ -54,7 +54,7 @@ const Hero = memo(function Hero() {
             duration-200
           "
         >
-          Get in Touch
+          Book an Alignment Call
         </a>
 
       </div>

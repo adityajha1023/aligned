@@ -10,9 +10,9 @@ export default function Services() {
 
   const services = [
     { id: 1, title: "Brand & Positioning", img: feature1 },
-    { id: 2, title: "Business & Communication Assets", img: feature2 },
-    { id: 3, title: "Content & Authority", img: feature5 },
-    { id: 4, title: "Growth & Distribution", img: feature4 },
+    { id: 2, title: "Identity & Communication Assets", img: feature2 },
+    { id: 3, title: "Content & Authority System", img: feature5 },
+    { id: 4, title: "Distribution & Visibility", img: feature4 },
     { id: 5, title: "Growth Marketing", img: feature3 },
   ];
 
@@ -34,9 +34,9 @@ export default function Services() {
       id="services"
       className="
         w-full
-        min-h-[90vh]
+        h-screen md:h-[50vh] lg:h-[80vh]
         flex items-center justify-center
-        font-bricolage
+        font-bricolage mb-16 lg:mb-0
         px-6 md:px-16 lg:px-12
         text-[#145DA1]
       "
@@ -48,7 +48,7 @@ export default function Services() {
           flex flex-col md:flex-row lg:flex-row justify-center
           items-center
           gap-8 md:gap-14 lg:gap-24
-          py-12 md:py-16 lg:py-24
+          py-12 md:py-0 lg:py-24
         "
       >
         {/* LEFT CONTENT */}

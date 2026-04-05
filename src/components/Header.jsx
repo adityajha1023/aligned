@@ -14,7 +14,7 @@ const Header = memo(function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#F7F3CD]/70 backdrop-blur-lg border-b border-[#a8a8a8] font-bricolage">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#F7F3CD]/70 backdrop-blur-lg font-bricolage">
       {/* Navbar */}
       <div className="h-[80px] flex justify-between items-center px-6 md:px-12 lg:px-32">
         {/* Logo */}
