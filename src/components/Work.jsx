@@ -25,7 +25,7 @@ function Work() {
       id="work"
       className="
         w-full
-        h-[80vh] md:h-[50vh] lg:h-[80vh]
+        h-[80vh] md:h-[50vh] lg:h-[100vh]
         flex flex-col
         justify-center
         items-center

@@ -34,7 +34,7 @@ export default function Services() {
       id="services"
       className="
         w-full
-        h-screen md:h-[50vh] lg:h-[80vh]
+        h-screen md:h-[50vh] lg:h-[90vh]
         flex items-center justify-center
         font-bricolage mb-16 lg:mb-0
         px-6 md:px-16 lg:px-12

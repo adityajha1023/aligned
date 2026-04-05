@@ -25,21 +25,22 @@ export default function Cta2() {
           flex flex-col lg:flex-row
           items-center
           justify-evenly
-          gap-10 lg:gap-16
+          gap-10 lg:gap-0
         "
       >
         {/* Image */}
+        <div className="w-full max-w-xl flex justify-center">
         <img
             src={RightFit}
             alt="Brand alignment illustration"
             className="w-full object-cover"
           />
-
+        </div>
         {/* Content */}
-        <div className="flex flex-col lg:flex-col items-center lg:items-start gap-6 text-center lg:text-left">
+        <div className="flex flex-col lg:flex-col items-center lg:items-start gap-6 lg:gap-10 text-center lg:text-left">
 
           {/* Cards wrapper */}
-          <div className="flex flex-row md:flex-row lg:flex-col gap-6 w-full justify-center lg:justify-start">
+          <div className="flex flex-row md:flex-row lg:flex-col gap-6 lg:gap-10 w-full justify-center lg:justify-start">
 
             <div className="bg-[#145DA1] text-[#F7F3CD] flex flex-col rounded-md px-6 py-2 lg:py-6 text-sm sm:text-base font-medium shadow-md text-center w-[10rem] lg:w-[15rem] md:w-[17rem]">
               <span className="text-2xl sm:text-3xl font-bold">40+</span>
