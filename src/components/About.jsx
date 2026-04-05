@@ -60,7 +60,7 @@ function About() {
       ref={sectionRef}
       id="about"
       className="
-        h-screen md:h-[40vh]
+        h-[90vh] md:h-[40vh]
         lg:h-[70vh]
         px-4 sm:px-6
         flex flex-col

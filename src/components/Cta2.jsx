@@ -63,7 +63,7 @@ export default function Cta2() {
             text-[#145DA1]
             rounded-full
             px-6 py-3
-            text-sm sm:text-base
+            text-paragraph
             font-medium
             shadow-md
             hover:scale-105
