@@ -35,8 +35,7 @@ const Header = memo(function Header() {
 
           {/* Contact Button */}
           <a href="#contact" className="relative px-[1.5px] py-[1.5px] rounded-full cursor-pointer">
-            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-black via-white to-[#1F2455]" />
-            <span className="relative block px-4 py-2 bg-white rounded-full text-[16px] font-medium">
+            <span className="relative block px-4 py-2 bg-transparent border-2 border-[#145DA1] text-[#145DA1] hover:bg-[#145DA1] hover:text-[#F7F3CD] transition-transform duration-200 hover:scale-105 rounded-full text-[16px] font-medium">
               Contact Us
             </span>
           </a>

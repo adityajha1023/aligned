@@ -76,7 +76,7 @@ const Footer = memo(function Footer() {
         </div>
 
         {/* Brand Statement */}
-        <div className="flex justify-center items-center py-16">
+        <div className="flex justify-center items-center pt-16 pb-24">
           <h1 className="font-medium text-[clamp(48px,8vw,120px)] flex items-center leading-none">
             <span>Get</span>
             <ImageSlideshow />
@@ -85,8 +85,11 @@ const Footer = memo(function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-paragraph">
+        <div className="flex flex-col sm:flex-row justify-between items-center gap-6 text-paragraph">
           <p>©{currentYear} Aligned. All rights reserved.</p>
+          <p className="text-center w-[90%] md:w-[50%]">
+            6th floor, Hiranandani Business Park, Saki Vihar Rd, Tunga Village, Chandivali, Powai, Mumbai, Maharashtra 400072
+          </p>
           <a
             href="mailto:connect@byaligned.com"
             className="underline underline-offset-2 hover:text-[#145DA1] transition"
