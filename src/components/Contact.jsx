@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import contactImg from "../assets/contact.webp";
 import { useForm } from "@formspree/react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronsDown } from "lucide-react";
 
 function Contact() {
   const [service, setService] = useState("");
